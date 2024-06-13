@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Stream Sphere | Home</title>
     <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
     <header>
@@ -19,23 +19,25 @@
         <script>
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
-                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-                document.querySelector('.search-input').style.backgroundColor = "rgba(0,0,0,0.4) !important";
+                document.body.style.backgroundColor = "#A5A5A5FF";
+                document.querySelector('#searchbar').style.backgroundColor = "#A5A5A5FF";
+                document.querySelector('#searchbutton').style.color = "#A5A5A5FF";
             }
 
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0px";
                 document.body.style.backgroundColor = "white";
-                document.querySelector('.search-input').style.backgroundColor = "#fff";
+                document.querySelector('#searchbar').style.backgroundColor = "#fff";
+                document.querySelector('#searchbutton').style.color = "#000";
             }
         </script>
-        <a href="/"> <img src="images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
+        <a href="/"> <img src="/images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
         <div class="search-container">
             <form action="/search" method="GET">
                 <label>
-                    <input type="text" placeholder="Search..." name="q" class="search-input">
+                    <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
                 </label>
-                <button type="submit" class="search-button">Search</button>
+                <button type="submit" id="searchbutton" class="search-button">Search</button>
             </form>
         </div>
     </header>
