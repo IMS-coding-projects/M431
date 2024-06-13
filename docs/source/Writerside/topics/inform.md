@@ -6,7 +6,14 @@ The first step we took to go at this project was to inform ourselves about the t
 
 
 ## Research
-Upon searching for inspiration on the internet (various websites), we found a few interesting project ideas. The most interesting and the most doable project was to create an alternative front-end for YouTube. 
+
+Upon searching for inspiration on the internet (various websites), we found a few interesting project ideas. The most
+interesting and the most doable project was [iv-org/invidious](https://github.com/iv-org/invidious). Invidious is an
+alternative front-end to YouTube. It allows you to watch YouTube videos without ads and without tracking. It also allows
+you to download YouTube videos. This project is open-source and is written in Ruby.
+But [the sad thing](https://docs.invidious.io/instances/#list-of-public-invidious-instances-sorted-from-oldest-to-newest)
+is, is that invidious's CSS is (in our opinion) not very user-friendly. So we decided to create our own version of
+Invidious (without the download, accounts, and no-ads/trackers). We called this project _Stream Sphere_.
 
 Below you can find a mindmap of the project idea/personal requirements:
 
