@@ -2,52 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stream Sphere</title>
-    <link rel="icon" href="/m431-Webproject-Clone/web/images/StreamSphere.ico">
-    <link rel="stylesheet" href="/m431-Webproject-Clone/web/styles/main.css">
+    <title>Stream Sphere | Home</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
 
-<header>
-    <a href="/m431-Webproject-Clone/web/pages/Home/home_clicked.html"><img src="/m431-Webproject-Clone/web/images/menu2.png" alt="Streamsphere_Logo.png" class="menu"></a>
-    <img src="/m431-Webproject-Clone/web/images/Logo.png" alt="Streamsphere_Logo.png" class="logo">
-    
-    <div class="search-container">
-        <form action="/search" method="GET">
-            <input type="text" placeholder="Search..." name="q" class="search-input">
-            <button type="submit" class="search-button">Search</button>
-        </form>
-    </div>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.body.style.backgroundColor = "white";
+            }
+        </script>
+        <a href="/"> <img src="images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" placeholder="Search..." name="q" class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </header>
 
-</header>
-<main>main</main>
+    <aside>
 
-
-<aside>
-    <nav class="main-side-navigation">
-        <ul>
-            <li>
-                <a href="#" class="nav-item">
-                <img src="/m431-Webproject-Clone/web/images/" alt="Home" class="nav-icon">Home
-                </a>
-            </li>
-            
-            <li>
-                <a href="#" class="nav-item">
-                    <img src="/m431-Webproject-Clone/web/images/unvisited_trending.png" alt="trending" class="nav-icon">Trending
-                </a>
-            </li>
-
-        </ul>
-    </nav>
-</aside>
-
-<footer>
-    foot
-</footer>
+    </aside>
 
 
+    <main>
+        main content
+    </main>
 
-
+    <footer>
+        Here comes the footer
+    </footer>
 </body>
 </html>

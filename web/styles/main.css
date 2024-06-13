@@ -9,64 +9,47 @@ body {
     display: grid;
     grid-template-columns: 200px minmax(300px, 1fr);
     grid-template-rows: 100px minmax(300px, 1fr) 80px;
-
-    min-height: 100vw;
-    min-width: 100vw;
+    min-height: 80vw;
+    min-width: 80vw;
 }
 
 header {
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
+    background-color: #7bc681;
 }
 
 main {
     grid-row: 2 / 3;
     grid-column: 2 / -1;
+    background-color: #c6a46b;
 }
 
 footer {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
+    background-color: #a689c6;
 }
 
-aside{
-    grid-row: 2;
-    grid-column: 1 ;
+body header img.logo{
+    height: 60px;
 }
 
-img.logo{
-    width: 190px;
-    height: 50px;
-}
-
-img.menu:hover {
-    filter: brightness(50%);
-}
-
-img.menu{
-    padding-left: 20px;
-    padding-right: 10px;
-    width: 70px;
-    height: 30px;
-}
 header img{
     margin-left: 20px;
 }
 
 .search-container {
-    background-color: #fff;
-
     margin-left: 100px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .search-input {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -75,10 +58,13 @@ header img{
 }
 
 .search-input:focus {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-color: #007bff;
 }
 
 .search-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border: none;
     background-color: lightgrey;
@@ -90,12 +76,46 @@ header img{
 
 .search-button:hover {
     background-color: darkgrey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
 
-.main-side-navigation{
-    padding-left: 10px;
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
 
 li a {
