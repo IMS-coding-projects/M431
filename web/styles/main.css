@@ -184,3 +184,9 @@ li:hover {
     align-items: center;
 }
 
+
+
+.selected{
+    margin-left: 20px;
+    font-weight: bold;
+}
