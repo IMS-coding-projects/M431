@@ -4,7 +4,8 @@
 
 <instance-profile id="md"
                  name="M431 Documentation"
-                 start-page="empty-md-topic.md">
+                 start-page="general.md">
 
-    <toc-element topic="empty-md-topic.md"/>
+    <toc-element topic="inform.md"/>
+    <toc-element topic="general.md"/>
 </instance-profile>
