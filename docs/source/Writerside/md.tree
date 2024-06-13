@@ -7,5 +7,6 @@
                  start-page="general.md">
 
     <toc-element topic="inform.md"/>
+    <toc-element topic="planen-plan.md"/>
     <toc-element topic="general.md"/>
 </instance-profile>
