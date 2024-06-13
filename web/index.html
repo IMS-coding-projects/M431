@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream Sphere | Home</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="selected">Home</a>
+            <a href="/pages/Trending/">Trending</a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.body.style.backgroundColor = "#A5A5A5FF";
+                document.querySelector('#searchbar').style.backgroundColor = "#A5A5A5FF";
+                document.querySelector('#searchbutton').style.color = "#A5A5A5FF";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0px";
+                document.body.style.backgroundColor = "white";
+                document.querySelector('#searchbar').style.backgroundColor = "#fff";
+                document.querySelector('#searchbutton').style.color = "#000";
+            }
+        </script>
+        <a href="/"> <img src="/images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <label>
+                    <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                </label>
+                <button type="submit" id="searchbutton" class="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        main content
+    </main>
+
+    <footer>
+        Here comes the footer
+    </footer>
+</body>
+</html>
