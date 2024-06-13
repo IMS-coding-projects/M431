@@ -1,3 +1,4 @@
+<show-structure depth="2"/>
 # General
 
 Here you can find the documentation for Stream Sphere (an M431-WebProject). This documentation is divided into several topics. Each of them covers one part of the IPERKA strategy. The topics are structured as follows:

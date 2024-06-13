@@ -1,3 +1,5 @@
+<show-structure depth="2"/>
+
 # Informieren (inform)
 
 The first step we took to go at this project was to inform ourselves about the topic. We did this by analyzing the requirements of the project and by researching the topic. 

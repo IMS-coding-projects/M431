@@ -1,3 +1,5 @@
+<show-structure depth="2"/>
+
 # Entscheiden (choice)
 
 ## Comparison

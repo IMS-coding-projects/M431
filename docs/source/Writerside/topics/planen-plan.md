@@ -1,3 +1,4 @@
+<show-structure depth="2"/>
 # Planen (plan)
 
 In this section, we will document our planning for the project. This includes the planning of the project itself, the planning of the documentation, and the planning of the presentation.
