@@ -6,7 +6,9 @@ In this section, we will document our planning for the project. This includes th
 > 
 {style="note"}
 
-## Variant 1
+## Variants
+
+### Variant 1
 
 ![Variant 1](variant1.drawio.png) {border-effect="rounded" thumbnail="true"}
 
@@ -16,15 +18,15 @@ Here you can see the first variant of the project plan. This variant includes th
 - A Main Content area where the user can see several videos.
 - In the footer you can find a page switcher (and contact information.)
 
-### Pros: {id="pros_variant1"}
+#### Pros: {id="pros_variant1"}
 - The user can easily navigate through the website.
 - The user can easily find the content he is looking for.
 - The website is easy to use.
 
-### Cons: {id="cons_variant1"}
+#### Cons: {id="cons_variant1"}
 - none found
 
-## Variant 2
+### Variant 2
 
 ![variant2.drawio.png](variant2.drawio.png) {border-effect="rounded" thumbnail="true"}
 
@@ -33,37 +35,20 @@ Here you can see the second variant of the project plan. This variant includes t
 - A static Sidebar
 - A Main Content area where the user can see several videos.
 
-### Pros: {id="pros_variant2"}
+#### Pros: {id="pros_variant2"}
 - The user can easily navigate through the website.
 - The user can easily find the content he is looking for.
 - The website is easy to use.
 
-### Cons: {id="cons_variant2"}
+#### Cons: {id="cons_variant2"}
 - The sidebar is static and can't be hidden.
 - The search bar is smaller and might be harder to find.
 - A footer and a page switcher are missing.
 - It is not a modern design.
 
+### Conclusion
 
-## Comparison
-
-In the following table, we will compare the two variants of the project plan.
-
-| Criteria          | Variant 1     | Variant 2      |
-|-------------------|---------------|----------------|
-| **Navigation**    | Easy to use   | Easy to use    |
-| **Content**       | Easy to find  | Easy to find   |
-| **Design**        | Modern        | Not modern     |
-| **Sidebar**       | Can be hidden | Static         |
-| **Search Bar**    | Easy to find  | Harder to find |
-| **Footer**        | Included      | Missing        |
-| **Page Switcher** | Included      | Missing        |
-
-Based on the comparison, we decided to go with Variant 1. This variant is more modern and includes a footer and a page switcher which are important for the user experience.
-
-
-
-
+[See here what decision we made.](Entscheiden-choice.md)
 
 
 
