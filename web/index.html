@@ -5,7 +5,6 @@
     <title>Stream Sphere | Home</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/main.css">
-    <script type="text/javascript" src="/scripts/main.js"></script>
 </head>
 <body>
     <!-- Stuff that is not visible: -->
@@ -17,7 +16,9 @@
         <a href="#"></a>
     </div>
     <!-- END: Stuff that is not visible: -->
-    <header>
+
+    <div id="topmostline"></div>
+    <header id="stickyhead">
         <div class="leftheader">
             <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
             <a href="/">
@@ -25,7 +26,7 @@
             </a>
         </div>
 
-        <div class="rightheader search-container">
+        <div class="rightheader">
             <form action="/search" method="GET">
                 <label>
                     <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
@@ -35,8 +36,9 @@
         </div>
     </header>
 
+
     <main>
-        main content
+        <p>main content</p>
     </main>
 
     <footer>
@@ -44,5 +46,6 @@
         <p>&copy; Copyright StreamSphere 2024</p>
         <a href="pages/about-us/data-privacy">Privacy Policy</a>
     </footer>
+    <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>
