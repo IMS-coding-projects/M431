@@ -21,18 +21,6 @@ body {
     grid-column: 1 / -1;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-.sticky + main {
-    padding-top: 102px;
-}
-
-
-
 header {
     display: flex;
     justify-content: flex-start;
@@ -47,6 +35,13 @@ header {
 main {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(247, 29, 29, 0.51);
 }
 
 footer {
@@ -56,6 +51,19 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: small;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* HEADER STUFF */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + main {
+    padding-top: 102px;
 }
 
 body header div.leftheader img.logo{
@@ -74,14 +82,15 @@ body header div.leftheader {
     align-items: center;
 }
 
-
 body header div.rightheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    margin-right: 20px;
 }
 
+/* SEARCH STUFF */
 .search-input {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -114,21 +123,22 @@ body header div.rightheader {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.sidenav {
+/* SIDENAV STUFF */
+.sidenav-styles {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #000000;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.6s;
+    padding-top: 20px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenav-styles a {
+    padding: 8px 8px 8px 20px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -136,21 +146,16 @@ body header div.rightheader {
     transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidenav-styles a:hover {
     color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidenav-styles .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
 }
 
 li a {
@@ -162,61 +167,46 @@ li:hover {
     background-color: lightgrey;
 }
 
-.main-side-navigation ul li{
-    list-style-type: none;
-    padding: 10px;
-    border-radius: 5px;
-
+.selected{
+    font-weight: bold;
 }
 
-.main-side-navigation {
-    width: 100px;
-}
-
-.main-side-navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.main-side-navigation li {
-    margin-bottom: 10px;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
+a {
     text-decoration: none;
     color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.nav-item:hover {
-    background-color: #f0f0f0;
+/* Privacy Policy Styles*/
+
+[data-custom-class='body'], [data-custom-class='body'] * {
+    background: transparent;
+}
+[data-custom-class='title'], [data-custom-class='title'] * {
+    font-size: 26px;
+    color: #000000;
+}
+[data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+    color: #595959;
+    font-size: 14px;
+}
+[data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+    font-size: 19px;
+    color: #000000;
+}
+[data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+    font-size: 17px;
+    color: #000000;
+}
+[data-custom-class='body_text'], [data-custom-class='body_text'] * {
+    color: #595959;
+    font-size: 14px;
+}
+[data-custom-class='link'], [data-custom-class='link'] * {
+    color: #3030F1;
+    font-size: 14px;
+    word-break: break-word;
 }
 
-.nav-icon {
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
-}
-
-.nav-item-home-clicked {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    text-align: center;
-}
-
-.nav-item-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.selected{
-    margin-left: 20px;
-    font-weight: bold;
+#privacy-policy{
+    padding-left: 20px;
 }

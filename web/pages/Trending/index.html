@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stream Sphere | Home</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-<header>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/">Home</a>
-        <a href="/pages/Trending/" class="selected">Trending</a>
-        <a href="#"></a>
-        <a href="#"></a>
-    </div>
-    <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-            document.querySelector('.search-input').style.backgroundColor = "rgba(0,0,0,0.4) !important";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0px";
-            document.body.style.backgroundColor = "white";
-            document.querySelector('.search-input').style.backgroundColor = "#fff";
-        }
-    </script>
-    <a href="/"> <img src="/images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
-    <div class="search-container">
-        <form action="/search" method="GET">
-            <label>
-                <input type="text" placeholder="Search..." name="q" class="search-input">
-            </label>
-            <button type="submit" class="search-button">Search</button>
-        </form>
-    </div>
-</header>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Home</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <!-- Stuff that is not visible: -->
+        <div id="sidenav" class="sidenav-styles">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="/pages/trending/" class="selected">Trending</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/about-us/impressum/">Impressum</a>
+            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+        </div>
+        <!-- END: Stuff that is not visible: -->
 
-<main>
-    main content
-</main>
+        <div id="topmostline"></div>
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+            </div>
+        </header>
 
-<footer>
-    Here comes the footer
-</footer>
-</body>
+
+        <main>
+            <p>trending content</p>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Stream Sphere | Impressum</title>
+        <title>Stream Sphere | Home</title>
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/styles/main.css">
     </head>
@@ -14,11 +14,11 @@
             <a href="/pages/trending/">Trending</a>
             <a href="/pages/about-us/">About us</a>
             <a href="/pages/about-us/impressum/">Impressum</a>
-            <a href="/pages/about-us/privacy-policy/"  class="selected">Privacy Policy</a>
+            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
         </div>
         <!-- END: Stuff that is not visible: -->
 
-        <div id="topmostline"></div>
+        <div id="topmostline"></div> <!-- This is the line that is displayed at the top of the page -->
         <header id="stickyhead">
             <div class="leftheader">
                 <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
@@ -26,25 +26,26 @@
                     <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
                 </a>
             </div>
+
             <div class="rightheader">
-                <form action="/search.html" method="get">
+                <form action="/search.html" method="GET">
                     <label>
                         <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
             </div>
-        </header>
+        </header> <!-- This is the header of the page -->
 
 
         <main>
-            <p>main content</p>
+            <h1 id="search-query"></h1>
         </main>
 
         <footer>
             <a href="/pages/about-us/impressum"><p>Impressum</p></a>
             <p>&copy; Copyright StreamSphere 2024</p>
-            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
         </footer>
         <script type="text/javascript" src="/scripts/main.js"></script>
     </body>

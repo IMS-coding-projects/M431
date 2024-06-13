@@ -8,12 +8,13 @@
 </head>
 <body>
     <!-- Stuff that is not visible: -->
-    <div id="mySidenav" class="sidenav">
+    <div id="sidenav" class="sidenav-styles">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" class="selected">Home</a>
-        <a href="/pages/Trending/">Trending</a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <a href="/" class="selected">Home</a>
+        <a href="/pages/trending/">Trending</a>
+        <a href="/pages/about-us/">About us</a>
+        <a href="/pages/about-us/impressum/">Impressum</a>
+        <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
     </div>
     <!-- END: Stuff that is not visible: -->
 
@@ -25,9 +26,8 @@
                 <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
             </a>
         </div>
-
         <div class="rightheader">
-            <form action="/search" method="GET">
+            <form action="/search.html" method="get">
                 <label>
                     <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
                 </label>
@@ -44,7 +44,7 @@
     <footer>
         <a href="/pages/about-us/impressum"><p>Impressum</p></a>
         <p>&copy; Copyright StreamSphere 2024</p>
-        <a href="pages/about-us/data-privacy">Privacy Policy</a>
+        <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
     </footer>
     <script type="text/javascript" src="/scripts/main.js"></script>
 </body>

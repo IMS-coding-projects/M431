@@ -1,16 +1,21 @@
 // Menu Click
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("sidenav").style.width = "250px";
     document.body.style.backgroundColor = "#A5A5A5FF";
     document.querySelector('#searchbar').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('#searchbutton').style.color = "#A5A5A5FF";
+    document.querySelector('#searchbutton').style.backgroundColor = "#A5A5A5FF";
+    document.querySelector('header').style.backgroundColor = "#A5A5A5FF";
+    document.querySelector('main').style.backgroundColor = "#A5A5A5FF";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("sidenav").style.width = "0px";
     document.body.style.backgroundColor = "white";
     document.querySelector('#searchbar').style.backgroundColor = "#fff";
-    document.querySelector('#searchbutton').style.color = "#000";
+    document.querySelector('#searchbutton').style.backgroundColor = "#fff";
+    document.querySelector('header').style.backgroundColor = "white";
+    document.querySelector('main').style.backgroundColor = "rgba(247, 29, 29, 0.51)";
+
 }
 
 // Make the header sticky on scroll
@@ -26,4 +31,18 @@ function onScroll() {
     } else {
         header.classList.remove("sticky");
     }
+}
+
+
+// Search Bar
+var urlParams = new URLSearchParams(window.location.search);
+
+var q = urlParams.get('q');
+
+var isSearch = window.location.pathname === '/search.html';
+
+if (!q && isSearch) {
+    window.location.href = "/";
+} else {
+document.getElementById('search-query').textContent = "Showing results for " + q;
 }
