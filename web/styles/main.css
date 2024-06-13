@@ -7,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 200px minmax(300px, 1fr);
+    grid-template-columns: minmax(300px, 1fr);
     grid-template-rows: 100px minmax(300px, 1fr) 80px;
     min-height: 80vw;
     min-width: 80vw;
@@ -20,13 +20,11 @@ header {
     flex-direction: row;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    background-color: #7bc681;
 }
 
 main {
     grid-row: 2 / 3;
-    grid-column: 2 / -1;
-    background-color: #c6a46b;
+    grid-column: 1 / -1;
 }
 
 footer {
