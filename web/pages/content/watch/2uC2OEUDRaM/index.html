@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | About Us</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <!-- Stuff that is not visible: -->
+        <div id="sidenav" class="sidenav-styles">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="/pages/trending/">Trending</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/about-us/impressum/">Impressum</a>
+            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        </div>
+        <!-- END: Stuff that is not visible: -->
+
+        <div id="topmostline"></div>
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+            </div>
+        </header>
+
+
+        <main class="watchview">
+            <iframe  src="https://www.youtube-nocookie.com/embed/2uC2OEUDRaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+            <h1>Denmark recalls Korean ramen for being too spicy | BBC News</h1>
+            <p>Denmark has recalled several spicy ramen noodle products by South Korean company Samyang.<br>
+               The country’s food agency claimed that the capsaicin levels in the packet noodles could poison consumers.<br>
+               It's unknown if any specific incidents in Denmark had prompted authorities there to take action.<br>
+               Subscribe here: http://bit.ly/1rbfUog<br>
+               For more news, analysis and features visit: www.bbc.com/news<br>
+               #Denmark #Ramen #BBCNews</p>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
+</html>
