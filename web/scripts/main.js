@@ -47,8 +47,9 @@ var isSearch = window.location.pathname === '/search.html';
 
 if (!q && isSearch) {
     window.location.href = "/";
-} else {
+} else if (isSearch && q) {
 document.getElementById('search-query').textContent = "Showing results for " + q;
+} else if (!isSearch) {
 }
 
 // Block ads
@@ -67,3 +68,11 @@ const clear = (() => {
         clearTimeout(timeout);
     }
 })();
+
+
+// Like Ads
+document.getElementById('like-button').addEventListener('click', function() {
+    // Your code here
+    document.getElementById('like-button').style.backgroundColor = "green";
+    document.getElementById('like-button').textContent = "Liked👍";
+});
