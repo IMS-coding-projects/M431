@@ -6,15 +6,26 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/styles/playlist.css">
 </head>
+
 <body>
+    <div id="sidenav" class="sidenav-styles">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/" class="selected">Home</a>
+        <a href="/pages/trending/">Trending</a>
+        <a href="/pages/about-us/">About us</a>
+        <a href="/pages/about-us/impressum/">Impressum</a>
+        <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+        <a href="/pages/streamsphere-music/" class="selected">StreamSphere Music</a>
+    </div>
+
     <div id="topmostline"></div>
     <header id="stickyhead">
         <div class="leftheader">
             <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
             <a href="/">
-                <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                <img src="/images/music-logo.png" alt="Stream Sphere Music Logo" class="logo">
             </a>
-            <h1>StreamSphere Music</h1>
+            
         </div>
         <div class="rightheader">
             <form action="/search.html" method="get">
@@ -36,12 +47,14 @@
                 <p>100 songs</p>
             </div>
         </div>
+
         <div class="track-list">
-            <!-- Example track items -->
-            <div class="track">
-                <p>1. Song Title 1</p>
-                <p>Artist Name</p>
-                <p>3:45</p>
+
+            <!-- Example track items!!! -->
+                <div class="track">
+                <p>1. Habicht</p>
+                <p>DORFTEKK</p>
+                <p>2:32</p>
             </div>
             <div class="track">
                 <p>2. Song Title 2</p>
@@ -53,7 +66,16 @@
                 <p>Artist Name</p>
                 <p>2:55</p>
             </div>
-            <!-- Add more track items as needed -->
+            <div class="track">
+                <p>4. Song Title 4</p>
+                <p>Artist Name</p>
+                <p>1:22</p>
+            </div>
+            <div class="track">
+                <p>5. Song Title 5</p>
+                <p>Artist Name</p>
+                <p>3:25</p>
+            </div>
         </div>
     </main>
 
