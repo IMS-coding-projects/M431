@@ -37,11 +37,10 @@ main {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-grow: 1;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgba(247, 29, 29, 0.51);
 }
 
 footer {
@@ -158,11 +157,7 @@ body header div.rightheader {
     margin-left: 50px;
 }
 
-li a {
-    text-decoration: none;
-}
-
-li:hover {
+.sidenav-styles li:hover {
     text-decoration: none;
     background-color: lightgrey;
 }
@@ -177,7 +172,6 @@ a {
 }
 
 /* Privacy Policy Styles*/
-
 [data-custom-class='body'], [data-custom-class='body'] * {
     background: transparent;
 }
@@ -206,7 +200,6 @@ a {
     font-size: 14px;
     word-break: break-word;
 }
-
 #privacy-policy{
     padding-left: 20px;
 }

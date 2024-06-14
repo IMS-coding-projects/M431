@@ -14,7 +14,7 @@ function closeNav() {
     document.querySelector('#searchbar').style.backgroundColor = "#fff";
     document.querySelector('#searchbutton').style.backgroundColor = "#fff";
     document.querySelector('header').style.backgroundColor = "white";
-    document.querySelector('main').style.backgroundColor = "rgba(247, 29, 29, 0.51)";
+    document.querySelector('main').style.backgroundColor = "white";
 
 }
 
