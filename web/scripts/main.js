@@ -26,10 +26,14 @@ var header = document.getElementById("stickyhead");
 var sticky = header.offsetTop;
 
 function onScroll() {
-    if (window.scrollY > sticky) {
-        header.classList.add("sticky");
-    } else {
+    if (window.location.pathname.includes('/content/watch/')) {
         header.classList.remove("sticky");
+    } else {
+        if (window.scrollY > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
     }
 }
 
