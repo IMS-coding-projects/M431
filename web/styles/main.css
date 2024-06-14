@@ -203,7 +203,7 @@ body header div.rightheader {
 }
 
 .selected{
-    font-weight: bold;
+    font-weight: 1000;
 }
 
 a {
@@ -291,4 +291,9 @@ a {
     background-color: #595959;
     color: #fff;border-radius: 5px;
     cursor: pointer;
+    font-size: larger;
+}
+
+.watchview footer button:hover {
+    background-color: #f71d1d;
 }
