@@ -6,6 +6,9 @@ function openNav() {
     document.querySelector('#searchbutton').style.backgroundColor = "#A5A5A5FF";
     document.querySelector('header').style.backgroundColor = "#A5A5A5FF";
     document.querySelector('main').style.backgroundColor = "#A5A5A5FF";
+    document.querySelector('a.playlist-items').style.backgroundColor = "#A5A5A5FF";
+   
+
 }
 
 function closeNav() {
