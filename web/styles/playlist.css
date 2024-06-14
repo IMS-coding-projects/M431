@@ -242,3 +242,38 @@ a {
     background-color: darkgrey;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* HEADER STUFF */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + main {
+    padding-top: 102px;
+}
+
+body header div.leftheader img.logo {
+    height: 50px;
+    margin-left: 50px;
+}
+
+body header {
+    display: flex;
+    justify-content: space-between;
+}
+
+body header div.leftheader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body header div.rightheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;
+}
