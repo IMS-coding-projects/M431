@@ -32,6 +32,8 @@ header {
     background-color: #fff;
 }
 
+/* Video Content Arrangement on home page */
+
 main {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
@@ -42,6 +44,8 @@ main {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 
 footer {
     grid-row: 3 / 4;
