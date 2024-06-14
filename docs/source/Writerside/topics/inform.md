@@ -17,7 +17,7 @@ Invidious (without the download, accounts, and no-ads/trackers). We called this 
 
 Below you can find a mindmap of the project idea/personal requirements:
 
-![mindmap.png](mindmap.png) {border-effect="rounded" thumbnail="true"}
+![mindmapv2.png](mindmapv2.png) {border-effect="rounded" thumbnail="true"}
 
 ## Requirements
 The requirements for Stream Sphere are as follows:
@@ -31,9 +31,11 @@ The requirements for Stream Sphere are as follows:
 ## User Story
 As a user, I want:
 - to be able to watch YouTube videos. (does it load...)
-- to be able to download YouTube videos. (does it download...)
-- to have a uptime of 99.9% (is it always online...)
+- to be able to listen to YouTube music. (does it play...)
+- to be able to download YouTube videos / music. (does it download...)
+- to have an uptime of 99.9% (is it always online...)
 - to have a secure connection to the website. (https)
 - to have a fast connection to the website. (under 2 seconds)
 - to be able to see the comments of a video.
 - to be able to see the description of a video.
+- to be able to see the artist and duration of a song.
