@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stream Sphere | Home</title>
+    <title>StreamSphere Music</title>
     <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/music.css">
 </head>
 <body>
-    <!-- Stuff that is not visible: -->
     <div id="sidenav" class="sidenav-styles">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/" class="selected">Home</a>
@@ -15,9 +14,8 @@
         <a href="/pages/about-us/">About us</a>
         <a href="/pages/about-us/impressum/">Impressum</a>
         <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
-        <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        <a href="/pages/streamsphere-music/" class="selected">StreamSphere Music</a>
     </div>
-    <!-- END: Stuff that is not visible: -->
 
     <div id="topmostline"></div>
     <header id="stickyhead">
@@ -26,20 +24,40 @@
             <a href="/">
                 <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
             </a>
+            <h1>StreamSphere Music</h1>
         </div>
         <div class="rightheader">
             <form action="/search.html" method="get">
                 <label>
-                    <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    <input type="text" id="searchbar" placeholder="Search music..." name="q" class="search-input">
                 </label>
                 <button type="submit" id="searchbutton" class="search-button">Search</button>
             </form>
         </div>
     </header>
 
-
     <main>
-        <p>main content</p>
+        <section class="music-categories">
+            <h2>Popular Playlists</h2>
+            <div class="playlist-grid">
+
+                <a href="/pages/streamsphere-music/playlists/1/" class="playlist-item">
+                    <img src="/images/playlist1.jpg" alt="Playlist 1">
+                    <p>Top Hits 2024</p>
+                </a>
+                <!--
+
+                <div class="playlist-item">
+                    <img src="/images/playlist2.jpg" alt="Playlist 2">
+                    <p>Chill Vibes</p>
+                </div>
+                <div class="playlist-item">
+                    <img src="/images/playlist3.jpg" alt="Playlist 3">
+                    <p>Workout Mix</p>
+                </div>
+            -->
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -47,6 +65,7 @@
         <p>&copy; Copyright StreamSphere 2024</p>
         <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
     </footer>
+
     <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>

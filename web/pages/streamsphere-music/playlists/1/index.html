@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StreamSphere Music - Top Hits 2024</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles/playlist.css">
+</head>
+<body>
+    <div id="topmostline"></div>
+    <header id="stickyhead">
+        <div class="leftheader">
+            <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+            <a href="/">
+                <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+            </a>
+            <h1>StreamSphere Music</h1>
+        </div>
+        <div class="rightheader">
+            <form action="/search.html" method="get">
+                <label>
+                    <input type="text" id="searchbar" placeholder="Search music..." name="q" class="search-input">
+                </label>
+                <button type="submit" id="searchbutton" class="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="playlist-header">
+            <img src="/images/playlist1.jpg" alt="Top Hits 2024">
+            <div class="details">
+                <h2>Top Hits 2024</h2>
+                <p>by StreamSphere</p>
+                <p>Updated daily</p>
+                <p>100 songs</p>
+            </div>
+        </div>
+        <div class="track-list">
+            <!-- Example track items -->
+            <div class="track">
+                <p>1. Song Title 1</p>
+                <p>Artist Name</p>
+                <p>3:45</p>
+            </div>
+            <div class="track">
+                <p>2. Song Title 2</p>
+                <p>Artist Name</p>
+                <p>4:05</p>
+            </div>
+            <div class="track">
+                <p>3. Song Title 3</p>
+                <p>Artist Name</p>
+                <p>2:55</p>
+            </div>
+            <!-- Add more track items as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+        <p>&copy; Copyright StreamSphere 2024</p>
+        <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+    </footer>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+</html>
