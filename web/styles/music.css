@@ -204,6 +204,7 @@ a {
 }
 
 .playlist-item img {
+    margin-top: 25px;
     width: 400px;
     height: 400px;
     border-radius: 20px;
@@ -211,6 +212,7 @@ a {
 
 .playlist-item p {
     margin: 10px 0;
-    font-size: 1;
+    font-size: 25px;
+    font-weight: bold;
     color: #000;
 }
