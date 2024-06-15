@@ -55,9 +55,9 @@ main div.videocontent > * {
     max-width: 400px;
 }
 
-main div.videocontent iframe {
+main div.videocontent img {
     border-radius: 15px;
-    height: 220px;
+    height: 270px;
     width: 380px;
 }
 
@@ -159,7 +159,7 @@ body header div.rightheader {
 }
 
 .search-button:hover {
-    background-color: darkgrey;
+    background-color: rgba(247, 29, 29, 0.88);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -210,6 +210,14 @@ body header div.rightheader {
 a {
     text-decoration: none;
     color: #000;
+}
+
+a:hover {
+    color: #f71d1d;
+}
+
+.videocontent a:hover {
+    color: black;
 }
 
 /* Privacy Policy Styles*/
@@ -332,5 +340,47 @@ a {
 
 .watchview p:hover {
     background-color: rgba(129, 129, 129, 0.67);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.read-more {
+    border: none;
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: #595959;
+    color: #fff;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.read-more:hover {
+    background-color: #f71d1d;
+}
+
+/* About Us*/
+.about-us-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-us-links button {
+    border: none;
+    text-align: center;
+    background-color: #6a6a6a;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+    padding: 40px;
+}
+
+.about-us-links button:hover {
+    background-color: #f71d1d;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
