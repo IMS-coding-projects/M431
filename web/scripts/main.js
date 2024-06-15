@@ -93,16 +93,13 @@ function onScroll() {
 
 
 // Search Bar
-var urlParams = new URLSearchParams(window.location.search);
-var q = urlParams.get('q');
-var isSearch = window.location.pathname === '/search.html';
-if (!q && isSearch) {
-    window.location.href = "/";
-}
+const urlParams = new URLSearchParams(window.location.search);
+const q = urlParams.get('q');
+const isSearch = window.location.pathname === '/search.html';
 if (isSearch && q) {
-    document.getElementById('search-query').textContent = "Showing results for " + q;
-}
-if (!isSearch) {
+    document.getElementById('search-query').textContent = "Showing results for " + q + ":";
+} else if (isSearch && !q) {
+    window.location.href = "/";
 }
 
 // Block ads
@@ -142,8 +139,8 @@ if (pElement.textContent.length > 300) {
     var fullText = pElement.innerHTML;
     var truncatedText = pElement.innerHTML.substring(0, 300) + '...';
     pElement.innerHTML = truncatedText;
-    pElement.style.borderBottomRightRadius = '0px';
-    pElement.style.borderBottomLeftRadius = '0px';
+    pElement.style.borderBottomRightRadius = '0';
+    pElement.style.borderBottomLeftRadius = '0';
     var readMoreButton = document.createElement('button');
     readMoreButton.textContent = 'Read More';
     readMoreButton.className = 'read-more';
