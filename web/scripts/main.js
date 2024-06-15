@@ -80,7 +80,7 @@ window.onscroll = function() {onScroll()};
 var header = document.getElementById("stickyhead");
 var sticky = header.offsetTop;
 function onScroll() {
-    if (window.location.pathname.includes('/content/watch/')) {
+    if (window.location.pathname.includes('/content/watch/') || window.location.pathname.includes('/pages/streamsphere-music/')) {
         header.classList.remove("sticky");
     } else {
         if (window.scrollY > sticky) {
@@ -137,8 +137,7 @@ if (window.location.pathname.includes('/content/watch/')) {
 var pElement = document.querySelector('main.watchview > p');
 if (pElement.textContent.length > 300) {
     var fullText = pElement.innerHTML;
-    var truncatedText = pElement.innerHTML.substring(0, 300) + '...';
-    pElement.innerHTML = truncatedText;
+    pElement.innerHTML = pElement.innerHTML.substring(0, 300) + '...';
     pElement.style.borderBottomRightRadius = '0';
     pElement.style.borderBottomLeftRadius = '0';
     var readMoreButton = document.createElement('button');

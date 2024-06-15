@@ -102,10 +102,6 @@ footer {
     width: 100%
 }
 
-.sticky + main {
-    padding-top: 102px;
-}
-
 body header div.leftheader img.logo{
     height: 50px;
     margin-left: 50px;
