@@ -3,34 +3,75 @@
 
 // Menu Click
 function openNav() {
-    document.getElementById("sidenav").style.width = "250px";
-    document.getElementById("sidenav").style.zIndex = "3";
-    document.body.style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('#searchbar').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('#searchbutton').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('header').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('main').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('header').style.zIndex = "1";
-    //document.querySelector('a.playlist-items').style.backgroundColor = "#A5A5A5FF";
+    var sidenavElement = document.getElementById("sidenav");
+    var searchbarElement = document.querySelector('#searchbar');
+    var searchbuttonElement = document.querySelector('#searchbutton');
+    var headerElement = document.querySelector('header');
+    var mainElement = document.querySelector('main');
+    var welcomemsgElement = document.querySelector('main div.welcomemsg');
     var images = document.querySelectorAll('img');
+
+    if(sidenavElement) {
+        sidenavElement.style.width = "250px";
+        sidenavElement.style.zIndex = "3";
+    }
+    if(searchbarElement) {
+        searchbarElement.style.backgroundColor = "#A5A5A5FF";
+    }
+    if(searchbuttonElement) {
+        searchbuttonElement.style.backgroundColor = "#A5A5A5FF";
+    }
+    if(headerElement) {
+        headerElement.style.backgroundColor = "#A5A5A5FF";
+        headerElement.style.zIndex = "1";
+    }
+    if(mainElement) {
+        mainElement.style.backgroundColor = "#A5A5A5FF";
+    }
+    if(welcomemsgElement) {
+        welcomemsgElement.style.filter = "brightness(50%)";
+    }
     for (var i = 0; i < images.length; i++) {
-        images[i].style.filter = "brightness(50%)";
-        images[i].style.transition = "filter 0.5s";
-        images[i].style.zIndex = "0";
+        if(images[i]) {
+            images[i].style.filter = "brightness(60%)";
+            images[i].style.transition = "filter 0.5s";
+            images[i].style.zIndex = "0";
+        }
     }
 }
 
 function closeNav() {
-    document.getElementById("sidenav").style.width = "0px";
-    document.body.style.backgroundColor = "white";
-    document.querySelector('#searchbar').style.backgroundColor = "#fff";
-    document.querySelector('#searchbutton').style.backgroundColor = "#fff";
-    document.querySelector('header').style.backgroundColor = "white";
-    document.querySelector('main').style.backgroundColor = "white";
+    var sidenavElement = document.getElementById("sidenav");
+    var searchbarElement = document.querySelector('#searchbar');
+    var searchbuttonElement = document.querySelector('#searchbutton');
+    var headerElement = document.querySelector('header');
+    var mainElement = document.querySelector('main');
+    var welcomemsgElement = document.querySelector('main div.welcomemsg');
     var images = document.querySelectorAll('img');
+
+    if(sidenavElement) {
+        sidenavElement.style.width = "0px";
+    }
+    if(searchbarElement) {
+        searchbarElement.style.backgroundColor = "#fff";
+    }
+    if(searchbuttonElement) {
+        searchbuttonElement.style.backgroundColor = "lightgrey";
+    }
+    if(headerElement) {
+        headerElement.style.backgroundColor = "white";
+    }
+    if(mainElement) {
+        mainElement.style.backgroundColor = "white";
+    }
+    if(welcomemsgElement) {
+        welcomemsgElement.style.filter = "brightness(100%)";
+    }
     for (var i = 0; i < images.length; i++) {
-        images[i].style.filter = "brightness(100%)";
-        images[i].style.zIndex = "0";
+        if(images[i]) {
+            images[i].style.filter = "brightness(100%)";
+            images[i].style.zIndex = "0";
+        }
     }
 }
 
