@@ -66,6 +66,7 @@ main div.videocontent article {
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
     width: 400px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add this line */
 }
 
 main div.videocontent article:hover {
@@ -318,4 +319,18 @@ a {
 
 .watchview h1 button:hover {
     background-color: #f71d1d;
+}
+
+.watchview p {
+    background-color: rgba(129, 129, 129, 0.47);
+    min-width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-family: "Trebuchet MS", Asap, sans-serif;
+}
+
+.watchview p:hover {
+    background-color: rgba(129, 129, 129, 0.67);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
