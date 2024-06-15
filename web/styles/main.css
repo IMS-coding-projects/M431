@@ -262,13 +262,12 @@ a:hover {
 .watchview iframe {
     width: 1200px;
     height: 800px;
-
 }
 
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* for an aspect ratio of 16:9. Adjust as needed */
+    padding-bottom: 56.25%;
     height: 0;
 }
 

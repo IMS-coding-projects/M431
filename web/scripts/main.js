@@ -1,16 +1,17 @@
-// Notice: most (not all) of the code here is AI generated and may not be the best practice. It has been modified to work with the website.
+// Notice: most (not all) of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
 
-
+var sidenavElement = document.getElementById("sidenav");
+var searchbarElement = document.querySelector('#searchbar');
+var searchbuttonElement = document.querySelector('#searchbutton');
+var headerElement = document.querySelectorAll('header');
+var mainElement = document.querySelectorAll('main');
+var welcomemsgElement = document.querySelector('main div.welcomemsg');
+var images = document.querySelectorAll('img');
+var footerElement = document.querySelectorAll('footer');
+var bodyElement = document.querySelector('body');
 // Menu Click
 function openNav() {
-    var sidenavElement = document.getElementById("sidenav");
-    var searchbarElement = document.querySelector('#searchbar');
-    var searchbuttonElement = document.querySelector('#searchbutton');
-    var headerElement = document.querySelector('header');
-    var mainElement = document.querySelector('main');
-    var welcomemsgElement = document.querySelector('main div.welcomemsg');
-    var images = document.querySelectorAll('img');
-
+    bodyElement.style.backgroundColor = "#A5A5A5FF";
     if(sidenavElement) {
         sidenavElement.style.width = "250px";
         sidenavElement.style.zIndex = "3";
@@ -21,15 +22,23 @@ function openNav() {
     if(searchbuttonElement) {
         searchbuttonElement.style.backgroundColor = "#A5A5A5FF";
     }
-    if(headerElement) {
-        headerElement.style.backgroundColor = "#A5A5A5FF";
-        headerElement.style.zIndex = "1";
+    for (var h = 0; h < headerElement.length; h++) {
+        if(headerElement[h]) {
+            headerElement[h].style.backgroundColor = "#A5A5A5FF";
+        }
     }
-    if(mainElement) {
-        mainElement.style.backgroundColor = "#A5A5A5FF";
+    for (var m = 0; m < mainElement.length; m++) {
+        if(mainElement[m]) {
+            mainElement[m].style.backgroundColor = "#A5A5A5FF";
+        }
     }
     if(welcomemsgElement) {
         welcomemsgElement.style.filter = "brightness(50%)";
+    }
+    for (var f = 0; f < footerElement.length; f++) {
+        if(footerElement[f]) {
+            footerElement[f].style.backgroundColor = "#A5A5A5FF";
+        }
     }
     for (var i = 0; i < images.length; i++) {
         if(images[i]) {
@@ -41,14 +50,6 @@ function openNav() {
 }
 
 function closeNav() {
-    var sidenavElement = document.getElementById("sidenav");
-    var searchbarElement = document.querySelector('#searchbar');
-    var searchbuttonElement = document.querySelector('#searchbutton');
-    var headerElement = document.querySelector('header');
-    var mainElement = document.querySelector('main');
-    var welcomemsgElement = document.querySelector('main div.welcomemsg');
-    var images = document.querySelectorAll('img');
-
     if(sidenavElement) {
         sidenavElement.style.width = "0px";
     }
@@ -58,11 +59,20 @@ function closeNav() {
     if(searchbuttonElement) {
         searchbuttonElement.style.backgroundColor = "lightgrey";
     }
-    if(headerElement) {
-        headerElement.style.backgroundColor = "white";
+    for (var h = 0; h < headerElement.length; h++) {
+        if(headerElement[h]) {
+            headerElement[h].style.backgroundColor = "white";
+        }
     }
-    if(mainElement) {
-        mainElement.style.backgroundColor = "white";
+    for (var m = 0; m < mainElement.length; m++) {
+        if(mainElement[m]) {
+            mainElement[m].style.backgroundColor = "white";
+        }
+    }
+    for (var f = 0; f < footerElement.length; f++) {
+        if(footerElement[f]) {
+            footerElement[f].style.backgroundColor = "white";
+        }
     }
     if(welcomemsgElement) {
         welcomemsgElement.style.filter = "brightness(100%)";
@@ -73,6 +83,7 @@ function closeNav() {
             images[i].style.zIndex = "0";
         }
     }
+    bodyElement.style.backgroundColor = "white";
 }
 
 // Make the header sticky on scroll
