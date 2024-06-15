@@ -1,14 +1,23 @@
+// Notice: most (not all) of the code here is AI generated and may not be the best practice. It has been modified to work with the website.
+
+
 // Menu Click
 function openNav() {
     document.getElementById("sidenav").style.width = "250px";
+    document.getElementById("sidenav").style.zIndex = "3";
     document.body.style.backgroundColor = "#A5A5A5FF";
     document.querySelector('#searchbar').style.backgroundColor = "#A5A5A5FF";
     document.querySelector('#searchbutton').style.backgroundColor = "#A5A5A5FF";
     document.querySelector('header').style.backgroundColor = "#A5A5A5FF";
     document.querySelector('main').style.backgroundColor = "#A5A5A5FF";
-    document.querySelector('a.playlist-items').style.backgroundColor = "#A5A5A5FF";
-   
-
+    document.querySelector('header').style.zIndex = "1";
+    //document.querySelector('a.playlist-items').style.backgroundColor = "#A5A5A5FF";
+    var images = document.querySelectorAll('img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].style.filter = "brightness(50%)";
+        images[i].style.transition = "filter 0.5s";
+        images[i].style.zIndex = "0";
+    }
 }
 
 function closeNav() {
@@ -18,25 +27,24 @@ function closeNav() {
     document.querySelector('#searchbutton').style.backgroundColor = "#fff";
     document.querySelector('header').style.backgroundColor = "white";
     document.querySelector('main').style.backgroundColor = "white";
-
+    var images = document.querySelectorAll('img');
+    for (var i = 0; i < images.length; i++) {
+        images[i].style.filter = "brightness(100%)";
+        images[i].style.zIndex = "0";
+    }
 }
 
 // Make the header sticky on scroll
 window.onscroll = function() {onScroll()};
-
 var header = document.getElementById("stickyhead");
-
 var sticky = header.offsetTop;
-
 function onScroll() {
     if (window.location.pathname.includes('/content/watch/')) {
         header.classList.remove("sticky");
-    }
-{
+    } else {
         if (window.scrollY > sticky) {
             header.classList.add("sticky");
-        }
-{
+        } else {
             header.classList.remove("sticky");
         }
     }
@@ -74,48 +82,35 @@ const clear = (() => {
 })();
 
 // only allow like button to be clicked once
-
 if (window.location.pathname.includes('/content/watch/')) {
+    var videoId = window.location.pathname.split('/').pop();
     document.getElementById('like-button').addEventListener('click', function () {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";
-        document.cookie = `liked-${window.location.pathname.split('/').pop()}=True; expires=${new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+        document.cookie = `liked-${videoId}=True; expires=${new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
     });
-    if (document.cookie.indexOf('liked-2uC2OEUDRaM=True') !== -1) {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-    if (document.cookie.indexOf('liked-3yZDDr0JKVc=True') !== -1) {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-    if (document.cookie.indexOf('liked-boKmZKTKXHc=True') !== -1) {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-    if (document.cookie.indexOf('liked-fM-agiCB51c=True') !== -1) {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-    if (document.cookie.indexOf('liked-MevKTPN4ozw=True') !== -1) {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-    if (document.cookie.indexOf('liked-qW7CGTK-1vA=True') !== -1) {
+    if (document.cookie.indexOf(`liked-${videoId}=True`) !== -1) {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";
     }
 }
 
-
-// Redirect to the video URL when the iframe is clicked
-var iframes = document.querySelectorAll('a > iframe');
-
-for (var i = 0; i < iframes.length; i++) {
-    iframes[i].addEventListener('click', function(event) {
-        console.log("iframe clicked");
-        event.preventDefault();
-        var url = this.parentNode.getAttribute('href');
-        window.location.href = url;
+// read more button
+var pElement = document.querySelector('main.watchview > p');
+if (pElement.textContent.length > 300) {
+    var fullText = pElement.innerHTML;
+    var truncatedText = pElement.innerHTML.substring(0, 300) + '...';
+    pElement.innerHTML = truncatedText;
+    pElement.style.borderBottomRightRadius = '0px';
+    pElement.style.borderBottomLeftRadius = '0px';
+    var readMoreButton = document.createElement('button');
+    readMoreButton.textContent = 'Read More';
+    readMoreButton.className = 'read-more';
+    readMoreButton.addEventListener('click', function() {
+        pElement.style.borderBottomRightRadius = '15px';
+        pElement.style.borderBottomLeftRadius = '15px';
+        pElement.innerHTML = fullText;
+        readMoreButton.remove();
     });
+    pElement.parentNode.insertBefore(readMoreButton, pElement.nextSibling);
 }
