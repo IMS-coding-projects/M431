@@ -153,6 +153,11 @@ body header div.rightheader {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    padding: 5px;
+    border: none;
+    background-color: #000000;
+    color: #818181;
+    cursor: pointer;
 }
 
 li a {

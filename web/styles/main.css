@@ -56,9 +56,9 @@ main div.videocontent > * {
 }
 
 main div.videocontent img {
-    border-radius: 15px;
-    height: 270px;
     width: 380px;
+    height: 285px;
+    border-radius: 15px;
 }
 
 main div.videocontent article {
@@ -155,7 +155,23 @@ body header div.rightheader {
 }
 
 .search-button:hover {
-    background-color: rgba(247, 29, 29, 0.88);
+    background-color: rgba(247, 29, 29, 0.88) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border: none;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.login-button:hover {
+    background-color: rgba(247, 29, 29, 0.88) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -191,7 +207,11 @@ body header div.rightheader {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    padding: 5px 15px;
+    border: none;
+    background-color: transparent;
+    color: #818181;
+    cursor: pointer;
 }
 
 .sidenav-styles li:hover {

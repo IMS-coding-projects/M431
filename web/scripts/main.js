@@ -3,18 +3,21 @@
 var sidenavElement = document.getElementById("sidenav");
 var searchbarElement = document.querySelector('#searchbar');
 var searchbuttonElement = document.querySelector('#searchbutton');
+var loginbuttonElement = document.querySelector('.login-button');
 var headerElement = document.querySelectorAll('header');
 var mainElement = document.querySelectorAll('main');
 var welcomemsgElement = document.querySelector('main div.welcomemsg');
 var images = document.querySelectorAll('img');
 var footerElement = document.querySelectorAll('footer');
 var bodyElement = document.querySelector('body');
+
 // Menu Click
+// nav from w3schools.com with custom modifications
 function openNav() {
     bodyElement.style.backgroundColor = "#A5A5A5FF";
     if(sidenavElement) {
         sidenavElement.style.width = "250px";
-        sidenavElement.style.zIndex = "3";
+        sidenavElement.style.zIndex = "5";
     }
     if(searchbarElement) {
         searchbarElement.style.backgroundColor = "#A5A5A5FF";
@@ -22,9 +25,13 @@ function openNav() {
     if(searchbuttonElement) {
         searchbuttonElement.style.backgroundColor = "#A5A5A5FF";
     }
+    if (loginbuttonElement) {
+        loginbuttonElement.style.backgroundColor = "#A5A5A5FF";
+    }
     for (var h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
             headerElement[h].style.backgroundColor = "#A5A5A5FF";
+            headerElement[h].style.zIndex = "1";
         }
     }
     for (var m = 0; m < mainElement.length; m++) {
@@ -59,6 +66,9 @@ function closeNav() {
     if(searchbuttonElement) {
         searchbuttonElement.style.backgroundColor = "lightgrey";
     }
+    if (loginbuttonElement) {
+        loginbuttonElement.style.backgroundColor = "lightgrey";
+    }
     for (var h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
             headerElement[h].style.backgroundColor = "white";
@@ -87,6 +97,7 @@ function closeNav() {
 }
 
 // Make the header sticky on scroll
+// stick header from GitHub Copilot with custom modifications
 window.onscroll = function() {onScroll()};
 var header = document.getElementById("stickyhead");
 var sticky = header.offsetTop;
@@ -104,6 +115,7 @@ function onScroll() {
 
 
 // Search Bar
+// search from w3schools.com with custom modifications
 const urlParams = new URLSearchParams(window.location.search);
 const q = urlParams.get('q');
 const isSearch = window.location.pathname === '/search.html';
@@ -114,6 +126,7 @@ if (isSearch && q) {
 }
 
 // Block ads
+// block embedded ads from https://stackoverflow.com/questions/53433184/remove-ads-from-embedded-youtube-video
 const clear = (() => {
     const defined = v => v !== null && v !== undefined;
     const timeout = setInterval(() => {
@@ -131,6 +144,7 @@ const clear = (() => {
 })();
 
 // only allow like button to be clicked once
+// own code with little help from Copilot
 if (window.location.pathname.includes('/content/watch/')) {
     var videoId = window.location.pathname.split('/').pop();
     document.getElementById('like-button').addEventListener('click', function () {
@@ -145,8 +159,9 @@ if (window.location.pathname.includes('/content/watch/')) {
 }
 
 // read more button
+// Copilot generated code with modifications
 var pElement = document.querySelector('main.watchview > p');
-if (pElement.textContent.length > 300) {
+if (pElement && pElement.textContent.length > 300) {
     var fullText = pElement.innerHTML;
     pElement.innerHTML = pElement.innerHTML.substring(0, 300) + '...';
     pElement.style.borderBottomRightRadius = '0';
