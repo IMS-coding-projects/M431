@@ -1,6 +1,6 @@
 <show-structure depth="2"/>
 
-# Informieren (inform)
+# Informieren
 
 The first step we took to go at this project was to inform ourselves about the topic. We did this by analyzing the requirements of the project and by researching the topic. 
 
@@ -32,7 +32,7 @@ The requirements for Stream Sphere are as follows:
 As a user, I want:
 - to be able to watch YouTube videos. (does it load...)
 - to be able to download YouTube videos. (does it download...)
-- to have a uptime of 99.9% (is it always online...)
+- to have an uptime of 99.9% (is it always online...)
 - to have a secure connection to the website. (https)
 - to have a fast connection to the website. (under 2 seconds)
 - to be able to see the comments of a video.

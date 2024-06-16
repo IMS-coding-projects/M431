@@ -1,5 +1,6 @@
 <show-structure depth="2"/>
-# Planen (plan)
+
+# Planen
 
 In this section, we will document our planning for the project. This includes the planning of the project itself, the planning of the documentation, and the planning of the presentation.
 
@@ -49,7 +50,7 @@ Here you can see the second variant of the project plan. This variant includes t
 
 ### Conclusion
 
-[See here what decision we made.](Entscheiden-choice.md)
+[See here what decision we made.](entscheiden.md#nutzwertanalyse-scoringmodel)
 
 
 
