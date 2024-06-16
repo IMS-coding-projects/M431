@@ -1,10 +1,10 @@
-<show-structure depth="2"/>
+<show-structure depth="4"/>
 
-# Entscheiden (choice)
+# Entscheiden
 
 ## Comparison
 
-In the following table, we will compare [the two variants of the project](planen-plan.md#variants) plan.
+In the following table, we will compare [the two variants of the project](planen.md#variants) plan.
 
 | Criteria          | Variant 1     | Variant 2      |
 |-------------------|---------------|----------------|
@@ -16,7 +16,7 @@ In the following table, we will compare [the two variants of the project](planen
 | **Footer**        | Included      | Missing        |
 | **Page Switcher** | Included      | Missing        |
 
-Based on the comparison, we decided to go with [Variant 1](planen-plan.md#variant-1). This variant is more modern and
+Based on the comparison, we decided to go with [Variant 1](planen.md#variant-1). This variant is more modern and
 includes a footer and a page switcher which are important for the user experience.
 
 ## Nutzwertanalyse (Scoringmodel)
@@ -35,5 +35,5 @@ following table:
 | Kein Risiko            | 5          | 0.375         | 5          | 0.375         | 0.075        |
 | Gesamtnutzwert         |            | 5.125         |            | 4.625         | 1            |
 
-As you can see, Variant 1 has a higher total utility value than Variant 2. This only underlines our decision to go with
-Variant 1.
+As you can see, Variant 1 has a higher total utility value than Variant 2.
+_**This only underlines our decision to go with Variant 1.**_

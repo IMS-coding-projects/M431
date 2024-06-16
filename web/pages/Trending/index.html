@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stream Sphere | Home</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-<header>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/">Home</a>
-        <a href="/pages/Trending/" class="selected">Trending</a>
-        <a href="#"></a>
-        <a href="#"></a>
-    </div>
-    <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-            document.querySelector('.search-input').style.backgroundColor = "rgba(0,0,0,0.4) !important";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0px";
-            document.body.style.backgroundColor = "white";
-            document.querySelector('.search-input').style.backgroundColor = "#fff";
-        }
-    </script>
-    <a href="/"> <img src="/images/logo.png" alt="Streamsphere_Logo.png" class="logo"> </a>
-    <div class="search-container">
-        <form action="/search" method="GET">
-            <label>
-                <input type="text" placeholder="Search..." name="q" class="search-input">
-            </label>
-            <button type="submit" class="search-button">Search</button>
-        </form>
-    </div>
-</header>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Home</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body>
+        <!-- Stuff that is not visible: -->
+        <div id="sidenav" class="sidenav-styles">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/">Home</a>
+            <a href="/pages/trending/" class="selected">Trending</a>
+            <a href="/pages/about-us/">About us</a>
 
-<main>
-    main content
-</main>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        </div>
+        <!-- END: Stuff that is not visible: -->
 
-<footer>
-    Here comes the footer
-</footer>
-</body>
+        <div id="topmostline"></div>
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+            </div>
+        </header>
+
+
+        <main>
+            <div class="videocontent">
+                <article>
+                    <a href="/pages/content/watch/MevKTPN4ozw">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/MevKTPN4ozw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>Talking Tech with Elon Musk!</h2>
+                            <p>Talking Tesla, tech and the future with Elon Musk...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="/pages/content/watch/3yZDDr0JKVc">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/3yZDDr0JKVc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>NAS vs SAN - Network Attached Storage vs Storage Area Network</h2>
+                            <p>What is the difference between a NAS (network attached storage) and a SAN (storage area network)?</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="/pages/content/watch/boKmZKTKXHc">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/boKmZKTKXHc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>This blows away the competition - JONSBO N1 NAS Build</h2>
+                            <p>We’ve built some crazy servers in the range of petabytes of storage, but...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="pages/content/watch/qW7CGTK-1vA">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/qW7CGTK-1vA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>Deep-Sea Mining: Last Week Tonight with John Oliver (HBO)</h2>
+                            <p>John Oliver discusses deep-sea mining, whether or not it’s worth doing, and which undersea creature he most wants to eat.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="/pages/content/watch/fM-agiCB51c">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/fM-agiCB51c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>Is This As Horrible As Everyone is Saying</h2>
+                            <p>This is the greatest educational acolyte review of All Time.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="/pages/content/watch/2uC2OEUDRaM">
+                        <iframe  src="https://www.youtube-nocookie.com/embed/2uC2OEUDRaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        <div class="videoinfo">
+                            <h2>Denmark recalls Korean ramen for being too spicy | BBC News</h2>
+                            <p>Denmark has recalled several spicy ramen noodle products by South Korean company Samyang.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
 </html>
