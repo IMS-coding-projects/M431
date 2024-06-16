@@ -31,9 +31,12 @@ The requirements for Stream Sphere are as follows:
 
 - Stream Sphere should be an online website. (can it be connected from a Browser? (on port 80/443))
 - Stream Sphere should be able to play YouTube videos.
+- Stream Sphere should be able to play YouTube music.
 - Stream Sphere should be able to download YouTube videos.
+- Stream Sphere should be able to download YouTube musics.
 - Stream Sphere should have different accounts with different permissions. (see [mindmap of StreamSphere](#mindmap))
 - Stream Sphere should be able to show the description of a video.
+- Stream Sphere should be able to show the duration and artist of a song.
 
 ## User Story
 As a user, I want:
@@ -51,8 +54,11 @@ As a user, I want:
 
 - to be able to watch YouTube videos.
 - to be able to download YouTube videos.
+- to be able to listen to YouTube musics.
+- to be able to download YouTube musics.
 - to have an uptime of 99.9%.
 - to have a secure connection to the website. (http**s**)
 - to have a fast connection to the website. (under 2000ms)
 - to be able to see the description of a video.
+- to be able to see the artist and duration of a song.
 >>>>>>> 846232cc96c2e39ad46af067652e114199705413:docs/source/Writerside/topics/informieren.md
