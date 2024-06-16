@@ -1,4 +1,4 @@
-<show-structure depth="2"/>
+<show-structure depth="4"/>
 
 # General
 
