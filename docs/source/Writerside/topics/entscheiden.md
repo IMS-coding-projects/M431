@@ -1,4 +1,4 @@
-<show-structure depth="4"/>
+<show-structure depth="3"/>
 
 # Entscheiden
 
@@ -16,7 +16,7 @@ In the following table, we will compare [the two variants of the project](planen
 | **Footer**        | Included      | Missing        |
 | **Page Switcher** | Included      | Missing        |
 
-Based on the comparison, we decided to go with [Variant 1](planen.md#variant-1). This variant is more modern and
+Based on the comparison, **we decided to go with [Variant 1](planen.md#variant-1).** This variant is more modern and
 includes a footer and a page switcher which are important for the user experience.
 
 ## Nutzwertanalyse (Scoringmodel)
@@ -37,3 +37,10 @@ following table:
 
 As you can see, Variant 1 has a higher total utility value than Variant 2.
 _**This only underlines our decision to go with Variant 1.**_
+
+## Finish Planning
+
+> After choosing the model we created a gantt chart. Which you can find
+> on [Ims.Youtrack.cloud](https://ims.youtrack.cloud/gantt-charts/199-1).
+>
+{style="note"}
