@@ -1,12 +1,11 @@
 // Notice: most (not all) of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
 
 var sidenavElement = document.getElementById("sidenav");
-var searchbarElement = document.querySelector('#searchbar');
-var searchbuttonElement = document.querySelector('#searchbutton');
-var loginbuttonElement = document.querySelector('.login-button');
 var headerElement = document.querySelectorAll('header');
 var mainElement = document.querySelectorAll('main');
 var welcomemsgElement = document.querySelector('main div.welcomemsg');
+var inputElements = document.querySelectorAll('input');
+var buttonElements = document.querySelectorAll('button:not(.sidenav-styles button)');
 var images = document.querySelectorAll('img');
 var footerElement = document.querySelectorAll('footer');
 var bodyElement = document.querySelector('body');
@@ -18,15 +17,6 @@ function openNav() {
     if(sidenavElement) {
         sidenavElement.style.width = "250px";
         sidenavElement.style.zIndex = "5";
-    }
-    if(searchbarElement) {
-        searchbarElement.style.backgroundColor = "#A5A5A5FF";
-    }
-    if(searchbuttonElement) {
-        searchbuttonElement.style.backgroundColor = "#A5A5A5FF";
-    }
-    if (loginbuttonElement) {
-        loginbuttonElement.style.backgroundColor = "#A5A5A5FF";
     }
     for (var h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
@@ -47,6 +37,16 @@ function openNav() {
             footerElement[f].style.backgroundColor = "#A5A5A5FF";
         }
     }
+    for (var i = 0; i < inputElements.length; i++) {
+        if(inputElements[i]) {
+            inputElements[i].style.backgroundColor = "#A5A5A5FF";
+        }
+    }
+    for (var i = 0; i < buttonElements.length; i++) {
+        if(buttonElements[i]) {
+            buttonElements[i].style.backgroundColor = "#A5A5A5FF";
+        }
+    }
     for (var i = 0; i < images.length; i++) {
         if(images[i]) {
             images[i].style.filter = "brightness(60%)";
@@ -59,15 +59,6 @@ function openNav() {
 function closeNav() {
     if(sidenavElement) {
         sidenavElement.style.width = "0px";
-    }
-    if(searchbarElement) {
-        searchbarElement.style.backgroundColor = "#fff";
-    }
-    if(searchbuttonElement) {
-        searchbuttonElement.style.backgroundColor = "lightgrey";
-    }
-    if (loginbuttonElement) {
-        loginbuttonElement.style.backgroundColor = "lightgrey";
     }
     for (var h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
@@ -82,6 +73,16 @@ function closeNav() {
     for (var f = 0; f < footerElement.length; f++) {
         if(footerElement[f]) {
             footerElement[f].style.backgroundColor = "white";
+        }
+    }
+    for (var i = 0; i < inputElements.length; i++) {
+        if(inputElements[i]) {
+            inputElements[i].style.backgroundColor = "white";
+        }
+    }
+    for (var i = 0; i < buttonElements.length; i++) {
+        if(buttonElements[i]) {
+            buttonElements[i].style.backgroundColor = "#595959";
         }
     }
     if(welcomemsgElement) {

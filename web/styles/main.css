@@ -66,7 +66,7 @@ main div.videocontent article {
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
     width: 400px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add this line */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 main div.videocontent article:hover {
@@ -147,8 +147,8 @@ body header div.rightheader {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border: none;
-    background-color: lightgrey;
-    color: black;
+    background-color: #595959;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 5px;
@@ -163,8 +163,8 @@ body header div.rightheader {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border: none;
-    background-color: lightgrey;
-    color: black;
+    background-color: #595959;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
@@ -382,7 +382,7 @@ a:hover {
 .about-us-links button {
     border: none;
     text-align: center;
-    background-color: #6a6a6a;
+    background-color: #595959;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -437,4 +437,138 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* StreamSphere Music*/
+.music-categories {
+    margin-top: 20px;
+}
+
+.music-categories h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.playlist-item {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.playlist-item img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.playlist-item p {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+.playlist-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.playlist-header img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.playlist-header .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-header .details h2 {
+    margin-bottom: 10px;
+}
+
+.playlist-header .details p {
+    margin-bottom: 5px;
+}
+
+.track-list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.track-list .track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.track-list .track:hover {
+    background-color: #f1f1f1;
+}
+
+.track-list .track p {
+    margin: 0;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.breadcrumb li {
+    margin-right: 5px;
+    list-style-type: none;
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold;
+}
+
+
+.breadcrumb  li:not(:first-child)::before {
+    content: '>  ';
+}
+
+/* Little pictures for each song*/
+.track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.track-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.track p {
+    margin: 0;
+}
+
+.track > p:nth-child(2) {
+    flex: 1;
 }
