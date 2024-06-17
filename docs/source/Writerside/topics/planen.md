@@ -32,7 +32,7 @@ Here you can see the first variant of the project plan. This variant includes th
 ![variant2.drawio.png](variant2.drawio.png) {border-effect="rounded" thumbnail="true"}
 
 Here you can see the second variant of the project plan. This variant includes the following objects:
-- A Header wherere the logo and a (smaller) search bar are located.
+- A Header where the logo and a (smaller) search bar are located.
 - A static Sidebar
 - A Main Content area where the user can see several videos.
 

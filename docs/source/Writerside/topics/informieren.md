@@ -6,13 +6,12 @@ The first step we took in this project was reading
 the [criterias and requirements](https://bldsg-my.sharepoint.com/personal/silvan_gehrig_bwz-rappi_ch/_layouts/OneNote.aspx?id=%2Fpersonal%2Fsilvan_gehrig_bwz-rappi_ch%2FDocuments%2FClass%20Notebooks%2FModul%20293%2C%20431%2C%20V-Web%20-%20IMST23a%20BZRA&wd=target%28_Content%20Library%2F12.06.2024%20IPERKA%20Auswerten%2C%20V-Web%20-%20Tag%201.one%7CCE97D6B5-3495-4BCA-A799-3C72901B96F2%2F10_Modulprogramm%7C96CE3A06-A889-4756-BEE6-8).
 
 The plan was to:
-> Plan a web presence and realize a prototype as well as document the procedure according to IPERKA. The aim is
-> therefore to apply the concepts learned according to IPERKA and implement them with the web knowledge acquired in Module
-293.
+> Plan a web presence and realize a prototype as well as document the procedure according to IPERKA. The aim
+> therefore is to apply the concepts learned according to IPERKA and implement them with the web knowledge acquired in Module 293.
 
 It was given that:
 > In teams of two, create a website for a formal or informal organization (small business, club, band, running club,
-> game community, ...) or a product that does not yet have a website. Take a look at the problem domain and define the
+> game community, etc...) or a product that does not have a website yet. Take a look at the problem domain and define the
 > requirements for the website. The website must be technically fully implementable, including all content and technical
 > details.
 
@@ -33,7 +32,7 @@ So we decided to create our own version of Invidious. We decided to call the pro
 
 ### Mindmap
 
-Since it is always a good Idea to make a Mindmap (and it is a part of Iperka), we created one. Below you can find a
+Since it is always a good Idea to make a Mindmap (and since it is a part of Iperka), we created one. Below you can find a
 mindmap of the project idea/personal requirements:
 
 ![mindmap.png](mindmap.png) {border-effect="rounded" thumbnail="true"}

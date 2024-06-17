@@ -17,7 +17,7 @@ In the following table, we will compare [the two variants of the project](planen
 | **Page Switcher** | Included      | Missing        |
 
 Based on the comparison, **we decided to go with [Variant 1](planen.md#variant-1).** This variant is more modern and
-includes a footer and a page switcher which are important for the user experience.
+includes a footer and a page switcher which are important for the user's experience.
 
 ## Nutzwertanalyse (Scoringmodel)
 
@@ -53,7 +53,7 @@ _**This only underlines our decision to go with Variant 1.**_
 
 ## Finish Planning
 
-After choosing a Model, we created a gantt chart. You can find that
+After choosing a Model, we created a gantt chart. You can find it
 on [Ims.Youtrack.cloud](https://ims.youtrack.cloud/gantt-charts/199-1) or here:
 
 ![ganttchart.png](ganttchart.png) {border-effect="rounded" thumbnail="true"}
