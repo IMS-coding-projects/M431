@@ -12,3 +12,13 @@ topics. Each of them covers one part of the IPERKA strategy. The topics are stru
 4. [**Realisiern:** Here](realisieren.md) you can find out how we created the project.
 5. [**Kontrolliern:** Here](#) you can find out how we tested our results with the project requirements.
 6. [**Auswerten:** And finally, here](#) you can find our evaluation of the project. 
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>

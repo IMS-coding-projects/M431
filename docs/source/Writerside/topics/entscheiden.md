@@ -6,7 +6,7 @@
 
 In the following table, we will compare [the two variants of the project](planen.md#variants) plan.
 
-| Criteria          | Variant 1     | Variant 2      |
+| **Criteria**      | **Variant 1** | **Variant 2**  |
 |-------------------|---------------|----------------|
 | **Navigation**    | Easy to use   | Easy to use    |
 | **Content**       | Easy to find  | Easy to find   |
@@ -35,12 +35,38 @@ following table:
 | Kein Risiko            | 5          | 0.375         | 5          | 0.375         | 0.075        |
 | Gesamtnutzwert         |            | 5.125         |            | 4.625         | 1            |
 
+### Beschreibung der Faktoren {collapsible="true"}
+
+| Faktoren               | Bedeutung                                                                |
+|------------------------|--------------------------------------------------------------------------|
+| Effektivität           | Wie effektiv kann der Benutzer das Produkt benutzen.                     |
+| Produkt- Attraktivität | Würde dieses Produkt sich gut auf dem Markt verkaufen?                   |
+| Simplistik             | Ist es eine simple, jedoch eine ausgefeilte, Idee?                       |
+| Machbarkeit            | Ist es realistisch so etwas um zu setzen.                                |
+| Abhängigkeiten         | Ist es Abhängig auf andere Systeme                                       |
+| Rendite                | Wie sieht das mögliche Einkommen aus.                                    |
+| Kein Risiko            | Wenn es nicht grosse Risiken mit sich bringt, dann hat es eine gut Note. |
+
+### Final Result
 As you can see, Variant 1 has a higher total utility value than Variant 2.
 _**This only underlines our decision to go with Variant 1.**_
 
 ## Finish Planning
 
-> After choosing the model we created a gantt chart. Which you can find
-> on [Ims.Youtrack.cloud](https://ims.youtrack.cloud/gantt-charts/199-1).
->
-{style="note"}
+After choosing a Model, we created a gantt chart. You can find that
+on [Ims.Youtrack.cloud](https://ims.youtrack.cloud/gantt-charts/199-1) or here:
+
+![ganttchart.png](ganttchart.png) {border-effect="rounded" thumbnail="true"}
+
+We recommend you to look at the gantt chart on YouTrack because it is more interactive, and the quality is better.
+
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>

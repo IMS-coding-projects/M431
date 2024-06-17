@@ -50,3 +50,14 @@ Here you can see the second variant of the project plan. This variant includes t
 ### Conclusion
 
 [See here what decision we made.](entscheiden.md#nutzwertanalyse-scoringmodel)
+
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>

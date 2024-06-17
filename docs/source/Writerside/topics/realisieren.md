@@ -18,3 +18,14 @@ day we used to merge both branches to the master branch to keep the main branch 
 After we created the branches Dario started with the front-end while I (Chandra) was doing the documentation. After a
 certain time we switched the roles. We believe that this was a good decision because we could focus on one thing at the
 time, and **both of us could do both and equal parts of the project.**
+
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>
