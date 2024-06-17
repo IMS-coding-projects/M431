@@ -602,3 +602,31 @@ a:hover {
 .track > p:nth-child(2) {
     flex: 1;
 }
+
+
+/* page-switcher */
+
+.page-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+    
+}
+
+.page-link {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #f71d1d;
+    color: #fff;
+}
+
+
+
