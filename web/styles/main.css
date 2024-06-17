@@ -626,5 +626,34 @@ a:hover {
     color: #fff;
 }
 
+/*track-list header stuff*/
+.track-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+    
+}
 
+.track-list-header .track-list-header-right{
+    display: flex;
+}
+
+.track-list-header p {
+    text-align: center;
+}
+
+.track p{
+    padding-right: 30px;
+}
+
+.track-list-header .track-list-header-right p{
+    padding-right: 10px;
+}
+
+.track-list-header .track-list-header-right .artist{
+    padding-right: 67px;
+}
 
