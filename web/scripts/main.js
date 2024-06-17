@@ -1,5 +1,8 @@
 // Notice: most (not all) of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
 
+// Menu Click
+// nav from w3schools.com with custom modifications
+
 var sidenavElement = document.getElementById("sidenav");
 var headerElement = document.querySelectorAll('header');
 var mainElement = document.querySelectorAll('main');
@@ -10,9 +13,8 @@ var images = document.querySelectorAll('img');
 var footerElement = document.querySelectorAll('footer');
 var bodyElement = document.querySelector('body');
 var loginButton = document.querySelector('.login-button a');
+var formElement = document.querySelectorAll('.login-signup-container form');
 
-// Menu Click
-// nav from w3schools.com with custom modifications
 function openNav() {
     loginButton.style.color = "#A5A5A5FF";
     bodyElement.style.backgroundColor = "#A5A5A5FF";
@@ -55,6 +57,11 @@ function openNav() {
             images[i].style.filter = "brightness(60%)";
             images[i].style.transition = "filter 0.5s";
             images[i].style.zIndex = "0";
+        }
+    }
+    for (var i = 0; i < formElement.length; i++) {
+        if(formElement[i]) {
+            formElement[i].style.backgroundColor = "#9c9c9c";
         }
     }
 }
@@ -100,6 +107,11 @@ function closeNav() {
             images[i].style.zIndex = "0";
         }
     }
+    for (var i = 0; i < formElement.length; i++) {
+        if(formElement[i]) {
+            formElement[i].style.backgroundColor = "lightgray";
+        }
+    }
 }
 
 // Make the header sticky on scroll
@@ -124,7 +136,7 @@ function onScroll() {
 // search from w3schools.com with custom modifications
 const urlParams = new URLSearchParams(window.location.search);
 const q = urlParams.get('q');
-const isSearch = window.location.pathname === '/search.html';
+const isSearch = window.location.pathname === '/search.html' || window.location.pathname === '/pages/streamsphere-music/search.html';
 if (isSearch && q) {
     document.getElementById('search-query').textContent = "Showing results for " + q + ":";
 } else if (isSearch && !q) {
