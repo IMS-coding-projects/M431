@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Account Center</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="sidenav" class="sidenav-styles">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <a href="/">Home</a>
+            <a href="/pages/login/">Login/Signup</a>
+            <a href="/pages/trending/">Trending</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        </div>
+
+        <div id="topmostline"></div>
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+                <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
+            </div>
+        </header>
+
+        <SCRIPT>
+            window.onload = function() {
+                const username = localStorage.getItem('username');
+                if (username) {
+                    const usernameElement = document.querySelector('#username');
+                    usernameElement.textContent = 'Username: ' + username;
+                    if (localStorage.getItem('admin') === 'true'){
+                        const accountTypeElement = document.querySelector('#account-type');
+                        accountTypeElement.textContent = 'Admin';
+                    } else {
+                        const accountTypeElement = document.querySelector('#account-type');
+                        accountTypeElement.textContent = 'User';
+                        const subscriptionTypeElement = document.querySelector('#subscription-type');
+                        subscriptionTypeElement.textContent = 'Free';
+                    }
+                    const subscriptionExpiryElement = document.querySelector('#subscription-expiry');
+                    subscriptionExpiryElement.textContent = 'Cookie based subscription, expires when browser is closed.';
+                } else {
+                    window.location.href = "/";
+                }
+            };
+        </SCRIPT>
+
+        <main>
+            <h1>Account Center</h1>
+            <div class="account-center-container">
+                <div class="account-center-item">
+                    <h2>Account Information</h2>
+                    <p id="username">Username: Username</p>
+                    <p>Account Type: <span id="account-type">Account Type</span></p>
+                    <button onclick="window.location.href = '/pages/signup/'">Edit Account Information</button>
+                </div>
+                <div class="account-center-item">
+                    <h2>Subscription Information</h2>
+                    <p>Subscription Type: <span id="subscription-type">Subscription Type</span></p>
+                    <p>Subscription Expires: <span id="subscription-expiry">Subscription Expiry</span></p>
+                    <button onclick="window.location.reload()">Renew Subscription</button>
+                </div>
+                <div class="account-center-item">
+                    <h2>Account Settings</h2>
+                    <button id="change-pwd">Change Password</button>
+                    <button id="change-acc-type">Change Account Type</button>
+                    <button id="del-acc">Delete Account</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
+</html>
