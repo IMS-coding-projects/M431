@@ -8,7 +8,7 @@
 body {
     display: grid;
     grid-template-columns: minmax(300px, 1fr);
-    grid-template-rows: 100px minmax(300px, 1fr) 50px;
+    grid-template-rows: 100px minmax(300px, 1fr) 40px 50px;
     min-height: 110vh;
     min-width: 80vw;
 }
@@ -85,7 +85,7 @@ main div.welcomemsg {
 }
 
 footer {
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
@@ -605,14 +605,13 @@ a:hover {
 
 
 /* page-switcher */
-
 .page-switcher {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     margin: 20px 0;
-    
+    grid-row: 3 / 4;
 }
 
 .page-link {
