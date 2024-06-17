@@ -53,7 +53,7 @@ _**This only underlines our decision to go with Variant 1.**_
 
 ## Finish Planning
 
-After choosing a Model, we created a gantt chart. You can find it
+After choosing a Model, we created a gantt chart. It can be found
 on [Ims.Youtrack.cloud](https://ims.youtrack.cloud/gantt-charts/199-1) or here:
 
 ![ganttchart.png](ganttchart.png) {border-effect="rounded" thumbnail="true"}
