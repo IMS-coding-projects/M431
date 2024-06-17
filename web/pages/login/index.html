@@ -8,41 +8,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <!-- Stuff that is not visible: -->
         <div id="sidenav" class="sidenav-styles">
             <button class="closebtn" onclick="closeNav()">&times;</button>
             <a href="/">Home</a>
+            <a href="/pages/login/" class="selected">Login/Signup</a>
             <a href="/pages/trending/">Trending</a>
             <a href="/pages/about-us/">About us</a>
-            <a href="/pages/streamsphere-music/">Streamsphere Music</a>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
         </div>
-        <!-- END: Stuff that is not visible: -->
+    
+        <div id="topmostline"></div>
         <header id="stickyhead">
             <div class="leftheader">
                 <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
-                <a href="/">
-                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                <a href="/pages/streamsphere-music/">
+                    <img src="/images/music-logo.png" alt="Stream Sphere Music Logo" class="logo">
                 </a>
+                
             </div>
-
             <div class="rightheader">
-                <form action="/search.html" method="GET">
+                <form action="/search.html" method="get">
                     <label>
-                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                        <input type="text" id="searchbar" placeholder="Search......" name="q" class="search-input">
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-                <a href="/pages/login/">
-                    <button class="login-button">Login/Signup</button>
-                </a>
+                <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
             </div>
         </header>
 
 
         <main>
             <div class="login-signup-container">
-                <h1 style="text-align: center; margin-top: 10px">Login</h1>
+                
                 <form action="/pages/login/" method="POST">
+                    <h1 style="text-align: center; margin-top: 10px">Login</h1>
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
                     <label for="password">Password</label>

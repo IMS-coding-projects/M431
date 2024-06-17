@@ -61,6 +61,7 @@ function openNav() {
 
 function closeNav() {
     loginButton.style.color = "white";
+    bodyElement.style.backgroundColor = "white";
     if(sidenavElement) {
         sidenavElement.style.width = "0px";
     }
@@ -99,7 +100,6 @@ function closeNav() {
             images[i].style.zIndex = "0";
         }
     }
-    bodyElement.style.backgroundColor = "white";
 }
 
 // Make the header sticky on scroll
