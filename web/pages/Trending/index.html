@@ -9,21 +9,17 @@
         <meta name="description" content="Stream Sphere is your go-to platform for trending videos and music. Explore our content today.">
     </head>
     <body>
-        <!-- Stuff that is not visible: -->
-        <div id="sidenav" class="sidenav-styles">
-            <button class="closebtn" onclick="closeNav()">&times;</button>
-            <a href="/">Home</a>
+        <div id="sidenav" class="sidenav-styles" aria-hidden="true">
+            <button class="closebtn" onclick="closeNav()" aria-label="close navigation">&times;</button>
+            <a href="/" class="selected">Home</a>
             <a href="/pages/login/">Login/Signup</a>
-            <a href="/pages/trending/" class="selected">Trending</a>
+            <a href="/pages/trending/">Trending</a>
             <a href="/pages/about-us/">About us</a>
             <a href="/pages/streamsphere-music/">StreamSphere Music</a>
         </div>
-        <!-- END: Stuff that is not visible: -->
-
-    
         <header id="stickyhead">
             <div class="leftheader">
-                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()" aria-label="open navigation">&#9776; Menu</span>
                 <a href="/">
                     <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
                 </a>
@@ -35,7 +31,7 @@
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-            <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
+                <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
             </div>
         </header>
 
@@ -107,13 +103,13 @@
         </main>
 
         <div class="page-switcher">
-            <a href="#" class="page-link">1</a>
-            <a href="#" class="page-link">2</a>
-            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link" aria-label="Page 1">1</a>
+            <a href="#" class="page-link" aria-label="Page 2">2</a>
+            <a href="#" class="page-link" aria-label="Page 3">3</a>
             <span>...</span>
-            <a href="#" class="page-link">8</a>
-            <a href="#" class="page-link">9</a>
-            <a href="#" class="page-link">10</a>
+            <a href="#" class="page-link" aria-label="Page 8">8</a>
+            <a href="#" class="page-link" aria-label="Page 9">9</a>
+            <a href="#" class="page-link" aria-label="Page 10">10</a>
         </div>
 
         <footer>
