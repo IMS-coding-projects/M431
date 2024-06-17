@@ -9,10 +9,12 @@ var buttonElements = document.querySelectorAll('button:not(.sidenav-styles butto
 var images = document.querySelectorAll('img');
 var footerElement = document.querySelectorAll('footer');
 var bodyElement = document.querySelector('body');
+var loginButton = document.querySelector('.login-button a');
 
 // Menu Click
 // nav from w3schools.com with custom modifications
 function openNav() {
+    loginButton.style.color = "#A5A5A5FF";
     bodyElement.style.backgroundColor = "#A5A5A5FF";
     if(sidenavElement) {
         sidenavElement.style.width = "250px";
@@ -58,6 +60,7 @@ function openNav() {
 }
 
 function closeNav() {
+    loginButton.style.color = "white";
     if(sidenavElement) {
         sidenavElement.style.width = "0px";
     }
