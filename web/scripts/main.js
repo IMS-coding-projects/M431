@@ -39,12 +39,13 @@ function openNav() {
     }
     for (var i = 0; i < inputElements.length; i++) {
         if(inputElements[i]) {
-            inputElements[i].style.backgroundColor = "#A5A5A5FF";
+            inputElements[i].style.backgroundColor = "#959595";
         }
     }
     for (var i = 0; i < buttonElements.length; i++) {
         if(buttonElements[i]) {
-            buttonElements[i].style.backgroundColor = "#A5A5A5FF";
+            buttonElements[i].style.backgroundColor = "#5e5e5e";
+            buttonElements[i].style.color = "#a5a5a5";
         }
     }
     for (var i = 0; i < images.length; i++) {
@@ -83,6 +84,7 @@ function closeNav() {
     for (var i = 0; i < buttonElements.length; i++) {
         if(buttonElements[i]) {
             buttonElements[i].style.backgroundColor = "#595959";
+            buttonElements[i].style.color = "white";
         }
     }
     if(welcomemsgElement) {
