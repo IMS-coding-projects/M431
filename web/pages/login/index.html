@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Stream Sphere | About Us</title>
+        <title>Stream Sphere | Login</title>
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,10 @@
             <button class="closebtn" onclick="closeNav()">&times;</button>
             <a href="/">Home</a>
             <a href="/pages/trending/">Trending</a>
-            <a href="/pages/about-us/" class="selected">About us</a>
-            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/streamsphere-music/">Streamsphere Music</a>
         </div>
         <!-- END: Stuff that is not visible: -->
-
-    
         <header id="stickyhead">
             <div class="leftheader">
                 <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
@@ -26,34 +24,41 @@
                     <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
                 </a>
             </div>
+
             <div class="rightheader">
-                <form action="/search.html" method="get">
+                <form action="/search.html" method="GET">
                     <label>
                         <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-            <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
+                <a href="/pages/login/">
+                    <button class="login-button">Login/Signup</button>
+                </a>
             </div>
         </header>
 
 
         <main>
-            <div class="welcomemsg">
-                <h1>StreamSphere</h1>
-                <p>StreamSphere is a platform for all your streaming needs. We provide you with the latest and greatest content from all over the internet.<br>From tech to comdedy to music, we have it all!</p>
-            </div>
-            <div class="about-us-links">
-                <a href="/pages/about-us/impressum/"><button>Impressum</button></a>
-                <a href="/"><button>Home</button></a>
-                <a href="/pages/about-us/privacy-policy/"><button>Privacy Policy</button></a>
+            <div class="login-signup-container">
+                <h1 style="text-align: center; margin-top: 10px">Login</h1>
+                <form action="/pages/login/" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                    <a href="/pages/signup/">
+                        <button type="button" id="signup">Don't have an account? Sign up here!</button>
+                    </a>
+                </form>
             </div>
         </main>
 
         <footer>
             <a href="/pages/about-us/impressum"><p>Impressum</p></a>
             <p>&copy; Copyright StreamSphere 2024</p>
-            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
         </footer>
         <script type="text/javascript" src="/scripts/main.js"></script>
     </body>

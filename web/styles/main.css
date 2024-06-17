@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-columns: minmax(300px, 1fr);
     grid-template-rows: 100px minmax(300px, 1fr) 50px;
-    min-height: 100vh;
+    min-height: 110vh;
     min-width: 80vw;
 }
 
@@ -55,10 +55,10 @@ main div.videocontent > * {
     max-width: 400px;
 }
 
-main div.videocontent iframe {
-    border-radius: 15px;
-    height: 220px;
+main div.videocontent img {
     width: 380px;
+    height: 285px;
+    border-radius: 15px;
 }
 
 main div.videocontent article {
@@ -66,7 +66,7 @@ main div.videocontent article {
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
     width: 400px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add this line */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 main div.videocontent article:hover {
@@ -79,7 +79,7 @@ main div.welcomemsg {
     display: block;
     text-align: center;
     border-radius: 15px;
-    background-color: rgba(255, 113, 113, 0.8);
+    background-color: rgba(247, 29, 29, 0.7);
     margin: 10px 20px;
     padding: 4px 8px
 }
@@ -102,12 +102,11 @@ footer {
     width: 100%
 }
 
-.sticky + main {
-    padding-top: 102px;
-}
-
 body header div.leftheader img.logo{
     height: 50px;
+}
+
+body header div.leftheader a {
     margin-left: 50px;
 }
 
@@ -151,15 +150,38 @@ body header div.rightheader {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border: none;
-    background-color: lightgrey;
-    color: black;
+    background-color: #595959;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 5px;
 }
 
 .search-button:hover {
-    background-color: darkgrey;
+    background-color: rgba(247, 29, 29, 0.88) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border: none;
+    background-color: #595959;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.login-button a {
+    color: white;
+}
+
+.login-button a:hover {
+    color: white;
+}
+
+.login-button:hover {
+    background-color: rgba(247, 29, 29, 0.88) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -195,7 +217,11 @@ body header div.rightheader {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    padding: 5px 15px;
+    border: none;
+    background-color: transparent;
+    color: #818181;
+    cursor: pointer;
 }
 
 .sidenav-styles li:hover {
@@ -210,6 +236,14 @@ body header div.rightheader {
 a {
     text-decoration: none;
     color: #000;
+}
+
+a:hover {
+    color: #f71d1d;
+}
+
+.videocontent a:hover {
+    color: black;
 }
 
 /* Privacy Policy Styles*/
@@ -258,13 +292,12 @@ a {
 .watchview iframe {
     width: 1200px;
     height: 800px;
-
 }
 
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* for an aspect ratio of 16:9. Adjust as needed */
+    padding-bottom: 56.25%;
     height: 0;
 }
 
@@ -330,7 +363,223 @@ a {
     font-family: "Trebuchet MS", Asap, sans-serif;
 }
 
-.watchview p:hover {
-    background-color: rgba(129, 129, 129, 0.67);
+.read-more {
+    border: none;
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: #595959;
+    color: #fff;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.read-more:hover {
+    background-color: #f71d1d;
+}
+
+/* About Us*/
+.about-us-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-us-links button {
+    border: none;
+    text-align: center;
+    background-color: #595959;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+    padding: 40px;
+}
+
+.about-us-links button:hover {
+    background-color: #f71d1d;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Login and Signup */
+.login-signup-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login-signup-container form input {
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-signup-container form button {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    background-color: #595959;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.login-signup-container form button:hover {
+    background-color: #f71d1d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-signup-container form button a {
+    color: white;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* StreamSphere Music*/
+.music-categories {
+    margin-top: 20px;
+}
+
+.music-categories h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.playlist-item {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.playlist-item img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.playlist-item p {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+.playlist-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.playlist-header img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.playlist-header .details {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-header .details h2 {
+    margin-bottom: 10px;
+}
+
+.playlist-header .details p {
+    margin-bottom: 5px;
+}
+
+.track-list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.track-list .track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.track-list .track:hover {
+    background-color: #f1f1f1;
+}
+
+.track-list .track p {
+    margin: 0;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.breadcrumb li {
+    margin-right: 5px;
+    list-style-type: none;
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold;
+}
+
+
+.breadcrumb  li:not(:first-child)::before {
+    content: '>  ';
+}
+
+/* Little pictures for each song*/
+.track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.track-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.track p {
+    margin: 0;
+}
+
+.track > p:nth-child(2) {
+    flex: 1;
 }
