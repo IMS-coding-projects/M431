@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Stream Sphere | Account Center</title>
+        <title>Stream Sphere | Admin Center</title>
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,18 +38,10 @@
 
         <SCRIPT>
             window.onload = function() {
-                const username = localStorage.getItem('username');
-                if (localStorage.getItem('admin') === 'true') {
-                    window.location.href = "/pages/admin/";
-                }
-                if (username) {
-                    document.querySelector('#username').textContent = 'Username: ' + username;
-                    document.querySelector('#account-type').textContent = 'User';
-                    document.querySelector('#subscription-type').textContent = 'Free';
-                    document.querySelector('#subscription-expiry').textContent = 'Cookie based subscription, expires when browser is closed.';
-                    localStorage.setItem('loggedIn', 'true');
-                } else {
-                    window.location.href = "/";
+                if (localStorage.getItem('admin') !== 'true' || localStorage.getItem('loggedIn') !== 'true'){
+                    try {localStorage.removeItem('admin')} catch (e) {}
+                    try {localStorage.removeItem('loggedIn')} catch (e) {}
+                    window.location.href = "/pages/account/";
                 }
             };
         </SCRIPT>
@@ -59,21 +51,21 @@
             <div class="account-center-container">
                 <div class="account-center-item">
                     <h2>Account Information</h2>
-                    <p id="username">Username: Username</p>
-                    <p>Account Type: <span id="account-type">Account Type</span></p>
-                    <button onclick="window.location.href = '/pages/signup/'">Edit Account Information</button>
+                    <p id="username">Username: Admin</p>
+                    <p>Account Type: Administrator</p>
+                    <button disabled>Edit Account Information</button>
                 </div>
                 <div class="account-center-item">
                     <h2>Subscription Information</h2>
-                    <p>Subscription Type: <span id="subscription-type">Subscription Type</span></p>
-                    <p>Subscription Expires: <span id="subscription-expiry">Subscription Expiry</span></p>
+                    <p>Subscription Type: Forever</p>
+                    <p>Subscription Expires: Never</p>
                     <button onclick="window.location.reload()">Renew Subscription</button>
                 </div>
                 <div class="account-center-item">
                     <h2>Account Settings</h2>
-                    <button id="change-pwd">Change Password</button>
-                    <button id="change-acc-type">Change Account Type</button>
-                    <button id="del-acc">Delete Account</button>
+                    <button disabled id="change-pwd">Change Password</button>
+                    <button disabled id="change-acc-type">Change Account Type</button>
+                    <button disabled id="del-acc">Delete Account</button>
                 </div>
             </div>
         </main>

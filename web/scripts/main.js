@@ -1,5 +1,15 @@
 // Notice: some parts of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
 
+// change Login Button if user is logged in
+const loginSignupElement = document.querySelector('.login-button');
+const loginSignupText = document.querySelector('.login-button a');
+if (localStorage.getItem('loggedIn') === 'true') {
+    loginSignupText.textContent = 'Dashboard';
+    loginSignupText.href = '/pages/account/';
+    loginSignupElement.href = '/pages/account/';
+    loginSignupElement.style.backgroundColor = '#f71d1d';
+}
+
 // Menu Click
 // nav from w3schools.com with custom modifications
 const sidenavElement = document.getElementById("sidenav");

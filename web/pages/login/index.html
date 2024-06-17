@@ -40,11 +40,12 @@
                 
                 <form action="/pages/login/" method="POST">
                     <h1 style="text-align: center; margin-top: 10px">Login</h1>
-                    <label for="username">Username</label>
+                    <label for="username">Username <span id="username-message">*</span></label>
                     <input type="text" id="username" name="username" required>
-                    <label for="password">Password</label>
+                    <label for="password">Password <span id="pwd-message">*</span></label>
                     <input type="password" id="password" name="password" required>
                     <button type="submit">Login</button>
+                    <span id="error-message" style="font-weight: bold; font-size: large"></span>
                     <a href="/pages/signup/">
                         <button type="button" id="signup">Don't have an account?<br>Sign up here!</button>
                     </a>
