@@ -109,7 +109,7 @@ function closeNav() {
     }
     for (var i = 0; i < formElement.length; i++) {
         if(formElement[i]) {
-            formElement[i].style.backgroundColor = "lightgray";
+            formElement[i].style.backgroundColor = "#e1e1e1";
         }
     }
 }
