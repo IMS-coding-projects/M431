@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>StreamSphere Music - Top Hits 2024</title>
+    <title>StreamSphere Music | Top Hits 2024</title>
     <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/playlist.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div id="sidenav" class="sidenav-styles">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/" class="selected">Home</a>
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <a href="/">Home</a>
         <a href="/pages/trending/">Trending</a>
         <a href="/pages/about-us/">About us</a>
-        
         <a href="/pages/streamsphere-music/" class="selected">StreamSphere Music</a>
     </div>
 
@@ -29,10 +29,11 @@
         <div class="rightheader">
             <form action="/search.html" method="get">
                 <label>
-                    <input type="text" id="searchbar" placeholder="Search music..." name="q" class="search-input">
+                    <input type="text" id="searchbar" placeholder="Search......" name="q" class="search-input">
                 </label>
                 <button type="submit" id="searchbutton" class="search-button">Search</button>
             </form>
+            <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
         </div>
     </header>
 
@@ -58,27 +59,32 @@
         <div class="track-list">
 
             <!-- Example track items!!! -->
-                <div class="track">
+            <div class="track">
+                <img src="/images/streamsphere-music/song/song_habicht.jpg" alt="Track 1" class="track-img">
                 <p>1. Habicht</p>
                 <p>DORFTEKK</p>
                 <p>2:32</p>
             </div>
             <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 2" class="track-img">
                 <p>2. Song Title 2</p>
                 <p>Artist Name</p>
                 <p>4:05</p>
             </div>
             <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 3" class="track-img">
                 <p>3. Song Title 3</p>
                 <p>Artist Name</p>
                 <p>2:55</p>
             </div>
             <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 4" class="track-img">
                 <p>4. Song Title 4</p>
                 <p>Artist Name</p>
                 <p>1:22</p>
             </div>
             <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 5" class="track-img">
                 <p>5. Song Title 5</p>
                 <p>Artist Name</p>
                 <p>3:25</p>
