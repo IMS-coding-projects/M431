@@ -43,10 +43,10 @@
                     window.location.href = "/pages/admin/";
                 }
                 if (username) {
-                    document.querySelector('#username').textContent = 'Username: ' + username;
-                    document.querySelector('#account-type').textContent = 'User';
-                    document.querySelector('#subscription-type').textContent = 'Free';
-                    document.querySelector('#subscription-expiry').textContent = 'Cookie based subscription, expires when browser is closed.';
+                    document.querySelector('#username').value = username;
+                    document.querySelector('#account-type').value = 'User';
+                    document.querySelector('#subscription-type').value = 'Free';
+                    document.querySelector('#subscription-expiry').value = 'Local storage based subscription, expires when browser is closed.';
                     localStorage.setItem('loggedIn', 'true');
                 } else {
                     window.location.href = "/";
@@ -55,27 +55,31 @@
         </SCRIPT>
 
         <main class="accountcenter">
-            <h1>Account Center</h1>
-            <div class="account-center-container">
-                <div class="account-center-item">
-                    <h2>Account Information</h2>
-                    <p id="username">Username: Username</p>
-                    <p>Account Type: <span id="account-type">Account Type</span></p>
-                    <button onclick="window.location.href = '/pages/signup/'">Edit Account Information</button>
+            <h1 style="margin-top: 20px">Account Center</h1>
+                <div class="account-center-container">
+                    <div class="account-center-item">
+                        <h2>Account Information</h2>
+                        <p>Username: </p>
+                        <input type="text" id="username" value="Username">
+                        <p>Account Type: </p>
+                        <input type="text" id="account-type" value="Account Type" readonly>
+                        <button onclick="window.location.href = '/pages/signup/'">Edit Account Information</button>
+                    </div>
+                    <div class="account-center-item">
+                        <h2>Subscription Information</h2>
+                        <p>Subscription Type: </p>
+                        <input type="text" id="subscription-type" value="Subscription Type" readonly>
+                        <p>Subscription Expires: </p>
+                        <input type="text" id="subscription-expiry" value="Subscription Expiry" readonly>
+                        <button onclick="window.location.reload()">Renew Subscription</button>
+                    </div>
+                    <div class="account-center-item">
+                        <h2>Account Settings</h2>
+                        <button id="change-pwd">Change Password</button>
+                        <button id="change-acc-type">Change Account Type</button>
+                        <button id="del-acc">Delete Account</button>
+                    </div>
                 </div>
-                <div class="account-center-item">
-                    <h2>Subscription Information</h2>
-                    <p>Subscription Type: <span id="subscription-type">Subscription Type</span></p>
-                    <p>Subscription Expires: <span id="subscription-expiry">Subscription Expiry</span></p>
-                    <button onclick="window.location.reload()">Renew Subscription</button>
-                </div>
-                <div class="account-center-item">
-                    <h2>Account Settings</h2>
-                    <button id="change-pwd">Change Password</button>
-                    <button id="change-acc-type">Change Account Type</button>
-                    <button id="del-acc">Delete Account</button>
-                </div>
-            </div>
         </main>
 
         <footer>

@@ -656,3 +656,26 @@ a:hover {
     padding-right: 67px;
 }
 
+/* Account center*/
+
+.account-center-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.account-center-container > * {
+    display: flex;
+    flex-direction: column;
+    background-color: #cccccc;
+    border-radius: 15px;
+}
+
+.account-center-container *:not(p) {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
