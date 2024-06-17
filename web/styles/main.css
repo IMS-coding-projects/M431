@@ -32,6 +32,15 @@ header {
     background-color: #fff;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover:not[disabled] {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 /* Video Content Arrangement on home page */
 
 main {
@@ -679,3 +688,78 @@ a:hover {
     border: none;
 }
 
+#logout {
+    font-weight: bold;
+    background-color: #595959;
+    color: white;
+}
+
+#logout:hover {
+    background-color: #f71d1d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#del-acc {
+    font-weight: bold;
+    font-size: larger;
+    border: 3px #f71d1d solid;
+}
+
+#del-acc:hover {
+    background-color: #f71d1d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#save-info:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#subscription-expiry-msg:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+div.modal-content div {
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.modal-content button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #595959;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+div.modal-content button:nth-child(1) {
+    font-size: 1.5em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.modal-content div button:hover {
+    background-color: #f71d1d;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

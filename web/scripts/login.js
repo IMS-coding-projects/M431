@@ -1,4 +1,3 @@
-// Notice: some parts of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
 document.querySelector('div.login-signup-container').addEventListener('submit', function(event) {
     event.preventDefault();
     const username = document.querySelector('#username').value;
@@ -17,6 +16,11 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         unameMsg.style.color = 'red';
         return;
     }
+    if (username.includes(' ')) {
+        unameMsg.innerHTML = '<br>Username cannot contain spaces.';
+        unameMsg.style.color = 'red';
+        return;
+    }
     if (password.length < 5) {
         passMsg.innerHTML = '<br>Password must be at least 5 characters long.';
         passMsg.style.color = 'red';
@@ -26,6 +30,7 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
     if (username === 'admin' && password === '@dmin1234') {
         window.location.href = "/pages/admin/";
         localStorage.setItem('admin', true);
+        localStorage.setItem('loggedIn', true);
     }
     else if (username === 'admin' && password !== '@dmin1234') {
         localStorage.removeItem('username');

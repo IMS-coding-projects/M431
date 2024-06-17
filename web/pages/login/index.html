@@ -34,6 +34,12 @@
             </div>
         </header>
 
+        <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            if (localStorage.getItem('loggedIn') === 'true' && !(urlParams.has('newpwd'))) {
+                window.location.href = "/pages/account/";
+            }
+        </script>
 
         <main>
             <div class="login-signup-container">

@@ -1,5 +1,4 @@
-// Notice: some parts of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
-document.querySelector('div.login-signup-container').addEventListener('submit', function(event) {
+document.querySelector('div.login-signup-container').addEventListener('submit', function (event) {
     event.preventDefault();
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
@@ -18,6 +17,11 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         unameMsg.style.color = 'red';
         return;
     }
+    if (username.includes(' ')) {
+        unameMsg.innerHTML = '<br>Username cannot contain spaces.';
+        unameMsg.style.color = 'red';
+        return;
+    }
     if (password.length < 5) {
         passMsg.innerHTML = '<br>Password must be at least 5 characters long.';
         passMsg.style.color = 'red';
@@ -31,9 +35,9 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
     localStorage.setItem('username', username);
     if (username === 'admin' && password === '@dmin1234') {
         window.location.href = "/pages/admin/";
-        localStorage.setItem('admin', true);
-    }
-    else if (username === 'admin' && password !== '@dmin1234') {
+        localStorage.setItem('admin', 'true');
+        localStorage.setItem('loggedIn', 'true');
+    } else if (username === 'admin' && password !== '@dmin1234') {
         localStorage.removeItem('username');
         errorMsg.innerHTML = 'Username already taken.<br>Please try another username.';
         errorMsg.style.color = 'red';
@@ -43,3 +47,21 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         window.location.href = "/pages/account/";
     }
 });
+
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams)
+        return;
+    const username = urlParams.get('uname');
+    const pwdreset = urlParams.get('newpwd') === 'true'
+    if (username && pwdreset) {
+        document.querySelector('#username').value = decodeURIComponent(username);
+        document.querySelector('.login-signup-container h1').textContent = 'Change Password';
+        document.querySelector('.login-signup-container button').textContent = 'Change Password';
+        document.querySelector('.login-signup-container a').style.display = 'none';
+        document.querySelector('#password').focus();
+    } else if (username) {
+        document.querySelector('#username').value = decodeURIComponent(username);
+        document.querySelector('#password').focus();
+    }
+};
