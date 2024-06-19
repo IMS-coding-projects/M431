@@ -681,7 +681,7 @@ a:hover {
     border-radius: 15px;
 }
 
-.account-center-container *:not(p) {
+.account-center-container *:not(label) {
     padding: 10px;
     margin: 10px;
     border-radius: 15px;
@@ -710,11 +710,7 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#save-info:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#subscription-expiry-msg:hover {
+#save-info:hover, #subscription-expiry-msg:hover, #change-pwd:hover, #change-acc-type:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -752,14 +748,45 @@ div.modal-content button {
     font-size: 1.1em;
 }
 
-div.modal-content button:nth-child(1) {
-    font-size: 1.5em;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-div.modal-content div button:hover {
+div.modal-content div button:first-child:hover {
     background-color: #f71d1d;
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.modal-content div button:last-child:hover {
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f71d1d;
+}
+
+#pwdModal, #changeAccTypeModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+select option {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }

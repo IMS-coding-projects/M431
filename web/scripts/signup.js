@@ -1,9 +1,17 @@
-document.querySelector('div.login-signup-container').addEventListener('submit', function (event) {
+async function hashString(input) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(input);
+    const hash = await window.crypto.subtle.digest('SHA-256', data);
+    return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+document.querySelector('div.login-signup-container').addEventListener('submit', async function (event) {
     event.preventDefault();
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
     const password2 = document.querySelector('#password2').value;
     const unameMsg = document.querySelector('#username-message');
+    const hashPwd = await hashString(password);
     const passMsg = document.querySelector('#pwd-message');
     const errorMsg = document.querySelector('#error-message');
     unameMsg.innerHTML = '*';
@@ -32,12 +40,13 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         passMsg.style.color = 'red';
         return;
     }
+    const hashedAdminPwd = '8ebd449afedf357eb250d7a22991fb75560af9d0e5646e975b4eb47df8fcfeb9';
     localStorage.setItem('username', username);
-    if (username === 'admin' && password === '@dmin1234') {
+    if (username === 'admin' && hashPwd === hashedAdminPwd) {
         window.location.href = "/pages/admin/";
         localStorage.setItem('admin', 'true');
         localStorage.setItem('loggedIn', 'true');
-    } else if (username === 'admin' && password !== '@dmin1234') {
+    } else if (username === 'admin' && hashPwd !== hashedAdminPwd) {
         localStorage.removeItem('username');
         errorMsg.innerHTML = 'Username already taken.<br>Please try another username.';
         errorMsg.style.color = 'red';
@@ -52,9 +61,10 @@ window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     if (!urlParams)
         return;
-    const username = urlParams.get('uname');
-    const pwdreset = urlParams.get('newpwd') === 'true'
+    let username = urlParams.get('uname');
+    let pwdreset = urlParams.get('newpwd') === 'true';
     if (username && pwdreset) {
+        document.title = 'StreamSphere | Change Password';
         document.querySelector('#username').value = decodeURIComponent(username);
         document.querySelector('.login-signup-container h1').textContent = 'Change Password';
         document.querySelector('.login-signup-container button').textContent = 'Change Password';
@@ -63,5 +73,12 @@ window.onload = function() {
     } else if (username) {
         document.querySelector('#username').value = decodeURIComponent(username);
         document.querySelector('#password').focus();
+    }
+    username = localStorage.getItem('username');
+    if (username) {
+        document.querySelector('#username').value = username;
+    }
+    if (localStorage.getItem('loggedIn') === 'true') {
+        window.location.href = "/pages/account/";
     }
 };

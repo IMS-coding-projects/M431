@@ -6,6 +6,7 @@
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer type="text/javascript" src="/scripts/main.js"></script>
     </head>
     <body>
         <div id="sidenav" class="sidenav-styles">
@@ -32,52 +33,37 @@
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-                <button class="login-button" style="background-color: #f71d1d;"><a href="/pages/account/">Dashboard</a></button>
+                <button class="login-button" onclick="window.location.href = '/pages/login/';" style="background-color: #f71d1d;"><a href="/pages/account/">Dashboard</a></button>
             </div>
         </header>
-
-        <script>
-            window.onload = function() {
-                const username = localStorage.getItem('username');
-                if (localStorage.getItem('admin') === 'true') {
-                    window.location.href = "/pages/admin/";
-                }
-                if (username) {
-                    document.querySelector('#username').value = username;
-                    document.querySelector('#account-type').value = 'User (non-editable)';
-                    document.querySelector('#subscription-type').value = 'Free subscription (non-editable)';
-                    document.querySelector('#subscription-expiry').value = 'Local storage based subscription, expires when browser is closed. (non-editable)';
-                    localStorage.setItem('loggedIn', 'true');
-                } else {
-                    window.location.href = "/";
-                }
-            };
-        </script>
 
         <main class="accountcenter">
             <h1 style="margin-top: 20px">Account Center</h1>
                 <div class="account-center-container">
                     <div class="account-center-item">
                         <h2>Account Information</h2>
-                        <p>Username: </p>
+                        <label for="username">Username: </label>
                         <input type="text" id="username" value="Username">
-                        <p>Account Type: </p>
-                        <input type="text" id="account-type" value="Account Type" readonly>
+                        <label for="userType">Account Type: </label>
+                        <select id="userType" name="userType">
+                            <option value="normal" onload="document.getElementsByClassName('select').item(0)">Normal User</option>
+                            <option value="admin" disabled>Admin</option>
+                        </select>
                         <button onclick="saveData()" id="save-info">Save Account Information</button>
                         <button id="logout" onclick="localStorage.removeItem('loggedIn');localStorage.removeItem('username'); window.location.reload()">Log Out</button>
                     </div>
                     <div class="account-center-item">
                         <h2>Subscription Information</h2>
-                        <p>Subscription Type: </p>
+                        <label for="subscription-type">Subscription Type: </label>
                         <input type="text" id="subscription-type" value="Subscription Type" readonly>
-                        <p>Subscription Expires: </p>
+                        <label for="subscription-expiry">Subscription Expires: </label>
                         <input type="text" id="subscription-expiry" value="Subscription Expiry" readonly>
                         <button onclick="renewSubscription()" id="subscription-expiry-msg">Renew Subscription</button>
                     </div>
                     <div class="account-center-item">
                         <h2>Account Settings</h2>
                         <button id="change-pwd" onclick="newPwd()">Change Password</button>
-                        <button id="change-acc-type" onclick="alert('nuhuh. nope you can\'t :)')">Change Account Type</button>
+                        <button id="change-acc-type" onclick="changeAccType()">Change Account Type</button>
                         <button id="del-acc" onclick="delAcc()">Delete Account</button>
                     </div>
                 </div>
@@ -88,7 +74,6 @@
             <p>&copy; Copyright StreamSphere 2024</p>
             <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
         </footer>
-        <script type="text/javascript" src="/scripts/main.js"></script>
         <script type="text/javascript" src="/scripts/account.js"></script>
     </body>
 </html>

@@ -30,16 +30,9 @@
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-                <button class="login-button"><a href="/pages/login/">Login/Signup</a></button>
+                <button class="login-button" onclick="window.location.href = '/pages/login/';"><a href="/pages/login/">Login/Signup</a></button>
             </div>
         </header>
-
-        <script>
-            let urlParams = new URLSearchParams(window.location.search);
-            if (localStorage.getItem('loggedIn') === 'true' && !(urlParams.has('newpwd'))) {
-                window.location.href = "/pages/account/";
-            }
-        </script>
 
         <main>
             <div class="login-signup-container">
@@ -64,7 +57,7 @@
             <p>&copy; Copyright StreamSphere 2024</p>
             <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
         </footer>
-        <script type="text/javascript" src="/scripts/login.js"></script>
         <script type="text/javascript" src="/scripts/main.js"></script>
+        <script type="text/javascript" src="/scripts/login.js"></script>
     </body>
 </html>

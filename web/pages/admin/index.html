@@ -16,8 +16,6 @@
             <a href="/pages/about-us/">About us</a>
             <a href="/pages/streamsphere-music/">StreamSphere Music</a>
         </div>
-
-        
         <header id="stickyhead">
             <div class="leftheader">
                 <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
@@ -32,42 +30,39 @@
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-                <button class="login-button" style="background-color: #f71d1d;"><a href="/pages/account/">Dashboard</a></button>
+                <button class="login-button" onclick="window.location.href = '/pages/login/';" style="background-color: #f71d1d;"><a href="/pages/account/">Dashboard</a></button>
             </div>
         </header>
-
-        <SCRIPT>
-            window.onload = function() {
-                if (localStorage.getItem('admin') !== 'true' || localStorage.getItem('loggedIn') !== 'true' || localStorage.getItem('username') !== 'admin') {
-                    try {localStorage.removeItem('admin')} catch (e) {}
-                    try {localStorage.removeItem('loggedIn')} catch (e) {}
-                    try {localStorage.removeItem('username')} catch (e) {}
-                    window.location.href = "/pages/account/";
-                }
-            };
-        </SCRIPT>
-
         <main class="accountcenter">
             <h1 style="margin-top: 20px">Account Center</h1>
             <div class="account-center-container">
                 <div class="account-center-item">
                     <h2>Account Information</h2>
-                    <p>Username: </p>
-                    <input type="text" id="username" value="Username" disabled>
-                    <p>Account Type: </p>
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" value="admin" disabled>
+                    <label for="userType">Account Type: </label>
                     <select id="userType" name="userType">
                         <option value="admin" onload="document.getElementsByClassName('select').item(0)">Admin</option>
                         <option value="normal">Normal User</option>
                     </select>
                     <button onclick="saveDataAdmin()" id="save-info">Save Account Information</button>
-                    <button id="logout" onclick="localStorage.removeItem('loggedIn');localStorage.removeItem('username'); window.location.reload()">Log Out</button>
+                    <div id="changeAccTypeModal" class="modal">
+                        <div class="modal-content">
+                            <p><span class="modal-header">Warning: </span><br>Be aware: You are going to lose all of your special rights if you change from superuser.</p>
+                            <div class="modal-options">
+                                <button id="close-accTypeModal">Abort</button>
+                                <button id="confirm-accTypeModal">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="logout" onclick="localStorage.removeItem('loggedIn');localStorage.removeItem('username');localStorage.removeItem('admin'); window.location.reload()">Log Out</button>
                 </div>
                 <div class="account-center-item">
                     <h2>Subscription Information</h2>
-                    <p>Subscription Type: </p>
-                    <input type="text" id="subscription-type" value="Subscription Type" readonly>
-                    <p>Subscription Expires: </p>
-                    <input type="text" id="subscription-expiry" value="Subscription Expiry" readonly>
+                    <label for="subscription-type">Subscription Type: </label>
+                    <input disabled type="text" id="subscription-type" value="Subscription Type" readonly>
+                    <label for="subscription-expiry">Subscription Expires: </label>
+                    <input disabled type="text" id="subscription-expiry" value="Subscription Expiry" readonly>
                     <button onclick="renewSubscription()" id="subscription-expiry-msg">Renew Subscription</button>
                 </div>
                 <div class="account-center-item">
@@ -75,20 +70,10 @@
                     <button id="change-pwd" onclick="document.querySelector('#pwdModal').style.display = 'block'" >Change Password</button>
                     <div id="pwdModal" class="modal">
                         <div class="modal-content">
-                            <p><span style="font-weight: bolder">WARNING: </span><br>As an Administrator you cannot change your password. If you continue you will not be able to use 'admin' as your username, and you will not have admin permissions. You are going to be logged out!</p>
+                            <p><span class="modal-header">WARNING: </span><br>As an Administrator you cannot change your password. If you continue you will not be able to use 'admin' as your username, and you will not have admin permissions. You are going to be logged out!</p>
                             <div class="modal-options">
-                                <button id="close-pwdmodal" onclick="document.querySelector('#pwdModal').style.display = 'none';">&times;</button>
+                                <button id="close-pwdmodal" onclick="document.querySelector('#pwdModal').style.display = 'none';">Abort</button>
                                 <button id="confirm-pwdModal" onclick="newAdminPwd()">Confirm</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="change-acc-type" onclick="window.location.href = '/pages/admin/#username'">Change Account Type</button>
-                    <div id="changeAccTypeModal" class="modal">
-                        <div class="modal-content">
-                            <p><span style="font-weight: bolder">Information: </span><br>To change Account Type please refer to <a href="/pages/admin/#username">Account Information</a>. But be aware, that you are going to lose all of your <i>special</i> rights</p>
-                            <div class="modal-options">
-                                <button id="close-accTypeModal" onclick="document.querySelector('#pwdModal').style.display = 'none';">&times;</button>
-                                <button id="confirm-accTypeModal" onclick="newAdminPwd()">Confirm</button>
                             </div>
                         </div>
                     </div>
@@ -105,14 +90,5 @@
         <script type="text/javascript" src="/scripts/account.js"></script>
         <script type="text/javascript" src="/scripts/main.js"></script>
         <script type="text/javascript" src="/scripts/admin-account.js"></script>
-
-        <script>
-            window.onload = function () {
-                document.querySelector('#username').value = localStorage.getItem('username');
-                document.querySelector('#account-type').value = 'Admin (non-editable)';
-                document.querySelector('#pwdModal').style.display = 'none';
-                document.querySelector('#changeAccTypeModal').style.display = 'none';
-            }
-        </script>
     </body>
 </html>

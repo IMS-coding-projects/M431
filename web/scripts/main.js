@@ -1,6 +1,3 @@
-// Notice: some parts of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
-
-// change Login Button if user is logged in
 const loginSignupElement = document.querySelector('.login-button');
 const loginSignupText = document.querySelector('.login-button a');
 if (localStorage.getItem('loggedIn') === 'true') {
@@ -17,12 +14,14 @@ const headerElement = document.querySelectorAll('header');
 const mainElement = document.querySelectorAll('main');
 const welcomemsgElement = document.querySelector('main div.welcomemsg');
 const inputElements = document.querySelectorAll('input');
-const buttonElements = document.querySelectorAll('button:not(.sidenav-styles button)');
+const buttonElements = document.querySelectorAll('button:not(.sidenav-styles button):not(.login-button)');
 const images = document.querySelectorAll('img');
 const footerElement = document.querySelectorAll('footer');
 const bodyElement = document.querySelector('body');
 const loginButton = document.querySelector('.login-button a');
 const formElement = document.querySelectorAll('.login-signup-container form');
+const selectElements = document.querySelectorAll('select');
+const accountCenterButtons = document.querySelectorAll('.account-center-container button');
 
 function openNav() {
     loginButton.style.color = "#A5A5A5FF";
@@ -35,6 +34,11 @@ function openNav() {
         if(headerElement[h]) {
             headerElement[h].style.backgroundColor = "#A5A5A5FF";
             headerElement[h].style.zIndex = "1";
+        }
+    }
+    for (let s = 0; s < selectElements.length; s++) {
+        if(selectElements[s]) {
+            selectElements[s].style.backgroundColor = "#A5A5A5FF";
         }
     }
     for (let m = 0; m < mainElement.length; m++) {
@@ -91,6 +95,11 @@ function closeNav() {
             mainElement[m].style.backgroundColor = "white";
         }
     }
+    for (let s = 0; s < selectElements.length; s++) {
+        if(selectElements[s]) {
+            selectElements[s].style.backgroundColor = "white";
+        }
+    }
     for (let f = 0; f < footerElement.length; f++) {
         if(footerElement[f]) {
             footerElement[f].style.backgroundColor = "white";
@@ -121,6 +130,32 @@ function closeNav() {
             formElement[i].style.backgroundColor = "#e1e1e1";
         }
     }
+    for (let i = 0; i < accountCenterButtons.length; i++) {
+        if(accountCenterButtons[i]) {
+            accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+            accountCenterButtons[i].style.color = "black";
+            if (accountCenterButtons[i].textContent === "Log Out") {
+                accountCenterButtons[i].style.backgroundColor = "#595959";
+                accountCenterButtons[i].style.color = "white";
+                accountCenterButtons[i].addEventListener('mouseover', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#f71d1d";
+                });
+                accountCenterButtons[i].addEventListener('mouseout', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#595959";
+                });
+            }
+            if (accountCenterButtons[i].textContent === "Delete Account") {
+                accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+                accountCenterButtons[i].style.color = "black";
+                accountCenterButtons[i].addEventListener('mouseover', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#f71d1d";
+                });
+                accountCenterButtons[i].addEventListener('mouseout', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+                });
+            }
+        }
+    }
 }
 
 // Make the header sticky on scroll
@@ -143,9 +178,12 @@ function onScroll() {
 
 // Search Bar
 // search from w3schools.com with custom modifications
-const urlParams = new URLSearchParams(window.location.search);
-const q = urlParams.get('q');
-const isSearch = window.location.pathname === '/search.html' || window.location.pathname === '/pages/streamsphere-music/search.html';
+function getUrlParams() {
+    return new URLSearchParams(window.location.search);
+}
+let urlParams = getUrlParams();
+let q = urlParams.get('q');
+let isSearch = window.location.pathname === '/search.html' || window.location.pathname === '/pages/streamsphere-music/search.html';
 if (isSearch && q) {
     document.getElementById('search-query').textContent = "Showing results for " + q + ":";
 } else if (isSearch && !q) {

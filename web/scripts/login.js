@@ -1,7 +1,15 @@
-document.querySelector('div.login-signup-container').addEventListener('submit', function(event) {
+async function hashString(input) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(input);
+    const hash = await window.crypto.subtle.digest('SHA-256', data);
+    return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+document.querySelector('div.login-signup-container').addEventListener('submit', async function(event) {
     event.preventDefault();
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
+    const hashedPassword = await hashString(password);
     const unameMsg = document.querySelector('#username-message');
     const passMsg = document.querySelector('#pwd-message');
     const errorMsg = document.querySelector('#error-message');
@@ -27,12 +35,13 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         return;
     }
     localStorage.setItem('username', username);
-    if (username === 'admin' && password === '@dmin1234') {
+    const hashedAdminPwd = '8ebd449afedf357eb250d7a22991fb75560af9d0e5646e975b4eb47df8fcfeb9';
+    if (username === 'admin' && hashedPassword === hashedAdminPwd) {
         window.location.href = "/pages/admin/";
         localStorage.setItem('admin', true);
         localStorage.setItem('loggedIn', true);
     }
-    else if (username === 'admin' && password !== '@dmin1234') {
+    else if (username === 'admin' && hashedPassword !== hashedAdminPwd) {
         localStorage.removeItem('username');
         errorMsg.innerHTML = 'Invalid username or password.';
         errorMsg.style.color = 'red';
@@ -42,3 +51,13 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         window.location.href = "/pages/account/";
     }
 });
+
+window.onload = function() {
+    let username = localStorage.getItem('username');
+    if (username) {
+        document.querySelector('#username').value = username;
+    }
+    if (localStorage.getItem('loggedIn') === 'true') {
+        window.location.href = "/pages/account/";
+    }
+}
