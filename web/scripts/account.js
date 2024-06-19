@@ -54,6 +54,12 @@ function changeAccType(){
 
 window.onload = function() {
     const username = localStorage.getItem('username');
+    if (localStorage.getItem('loggedIn') !== 'true' || username === null) {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('username');
+        window.location.href = "/";
+        if (localStorage.getItem('admin') === 'true') {localStorage.removeItem('admin');}
+    }
     if (localStorage.getItem('admin') === 'true') {
         window.location.href = "/pages/admin/";
     }
