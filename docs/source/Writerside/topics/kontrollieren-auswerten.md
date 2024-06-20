@@ -72,7 +72,7 @@ I should sometimes not think too hard about simple problems that can be easily s
 I think it would be nice to have a bit more time to work on such projects, since they can be quite time-consuming. I
 would also like to work with Dario again, since it was quite fun and easy to work with him. What I would do differently
 next time is to only use JetBrains integrated development environments when using Git, since personally I find them way
-more intuitive than VSC for example. What is also a big plus, is that they have smart merging capabilities, resulting in
+more intuitive than VSC for example. What also is a big plus, is that they have smart merging capabilities, resulting in
 easier pulls and commits. Example: When pulling changes from SourceTree, and it recognizes that a local **file** is in a
 conflict, it immediately shows an error message and drops the pull. However, when using any JetBrains client it goes to
 check if uncommited **lines** are in conflict, and otherwise it pulls the new code.
@@ -83,3 +83,6 @@ Working on this project worked well and I have learned some new things along the
 I liked to work with Chandra on this project since it worked smoothly and we mostly always understood what each other’s ideas were. It should also be taken into notice that I should use JetBrains programs/tools for this kind of project since they provide more easy and efficient working. 
 Overall, the process of working on StreamSphere was not troubled with grave conflicts and went rather smoothly. It would result in finishing with the project faster or being able to implement more features.
 
+## General Reflection
+
+We both think that StreamSphere has been a successful project, we have learnt some more new things about html, css and even javascript. We quickly got ahead with each phase of IPERKA, wasted practically no time and personally think we fulfilled each and every requirement for the Project. Overall, it was a fun project in which we worked together well and if we had to do it again we would do it the same way that we did for this Project.
