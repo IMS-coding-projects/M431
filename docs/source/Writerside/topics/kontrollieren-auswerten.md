@@ -3,10 +3,8 @@
 In this section, each member of the project team will reflect on the project. We will answer the following questions:
 
 - How did I proceed and why did I proceed as I did?
-    - What did I do well, what didn't work so well?
-        - What were the causes?
-- What difficulties / problems occurred?
-    - What were the causes?
+  - What did I do well, what didn't work so well and why?
+- What difficulties / problems occurred and why?
 - What conclusions do I draw from this and what have I learned?
     - What would I do differently next time?
 
@@ -76,11 +74,14 @@ more intuitive than VSC for example. What also is a big plus, is that they have 
 easier pulls and commits. Example: When pulling changes from SourceTree, and it recognizes that a local **file** is in a
 conflict, it immediately shows an error message and drops the pull. However, when using any JetBrains client it goes to
 check if uncommited **lines** are in conflict, and otherwise it pulls the new code.
+![conflict.png](conflict.png)
 
 ### Dario {id="dario-different"}
 
 Working on this project worked well and I have learned some new things along the way when working on StreamSphere.
-I liked to work with Chandra on this project since it worked smoothly and we mostly always understood what each other’s ideas were. It should also be taken into notice that I should use JetBrains programs/tools for this kind of project since they provide more easy and efficient working. 
+I liked to work with Chandra on this project since it worked smoothly, and we mostly always understood what each other’s
+ideas were. It should also be taken into notice that I should use JetBrains programs/tools for this kind of project
+since they provide more easy and efficient working.
 Overall, the process of working on StreamSphere was not troubled with grave conflicts and went rather smoothly. It would result in finishing with the project faster or being able to implement more features.
 
 ## General Reflection

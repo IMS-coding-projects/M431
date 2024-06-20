@@ -1,4 +1,4 @@
-<show-structure depth="5"/>
+<show-structure depth="3"/>
 
 # Webauftritt StreamSphere
 
@@ -50,6 +50,38 @@ topics. Each of them covers one part of the IPERKA strategy. The topics are stru
 5. [Realisieren](realisieren.md)
 
 6. [Kontrollieren und Auswertung](kontrollieren-auswerten.md)
+
+6.1. [How did I proceed and why did I proceed as I did?](kontrollieren-auswerten.md#chandra-proceed)
+
+6.1.1. [Chandra](kontrollieren-auswerten.md#chandra-proceed)
+
+6.1.2. [Dario](kontrollieren-auswerten.md#dario-proceed)
+
+6.2. [What did I do well, what didn't work so well and why?](kontrollieren-auswerten.md#chandra-well)
+
+6.2.1. [Chandra](kontrollieren-auswerten.md#chandra-well)
+
+6.2.2. [Dario](kontrollieren-auswerten.md#dario-well)
+
+6.3. [What difficulties / problems occurred and why?](kontrollieren-auswerten.md#chandra-difficulties)
+
+6.3.1. [Chandra](kontrollieren-auswerten.md#chandra-difficulties)
+
+6.3.2. [Dario](kontrollieren-auswerten.md#dario-difficulties)
+
+6.4. [What conclusions do I draw from this and what have I learned?](kontrollieren-auswerten.md#chandra-conclusions)
+
+6.4.1. [Chandra](kontrollieren-auswerten.md#chandra-conclusions)
+
+6.4.2. [Dario](kontrollieren-auswerten.md#dario-conclusions)
+
+6.5. [What would I do differently next time?](kontrollieren-auswerten.md#chandra-different)
+
+6.5.1. [Chandra](kontrollieren-auswerten.md#chandra-different)
+
+6.5.2. [Dario](kontrollieren-auswerten.md#dario-different)
+
+7. [Anhang](Anhang.md)
 
 <seealso>
        <category ref="author">
