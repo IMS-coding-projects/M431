@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Account Center</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer type="text/javascript" src="/scripts/main.js"></script>
+    </head>
+    <body>
+        <div id="sidenav" class="sidenav-styles">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <a href="/">Home</a>
+            <a href="/pages/login/">Login/Signup</a>
+            <a href="/pages/trending/">Trending</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        </div>
+
+        
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+                <button class="login-button" onclick="window.location.href = '/pages/login/';" style="background-color: #f71d1d;"><a href="/pages/account/">Dashboard</a></button>
+            </div>
+        </header>
+
+        <main class="accountcenter">
+            <h1 style="margin-top: 20px">Account Center</h1>
+                <div class="account-center-container">
+                    <div class="account-center-item">
+                        <h2>Account Information</h2>
+                        <label for="username">Username: </label>
+                        <input type="text" id="username" value="Username">
+                        <label for="userType">Account Type: </label>
+                        <select id="userType" name="userType">
+                            <option value="normal" onload="document.getElementsByClassName('select').item(0)">Normal User</option>
+                            <option value="admin" disabled>Admin</option>
+                        </select>
+                        <button onclick="saveData()" id="save-info">Save Account Information</button>
+                        <button id="logout" onclick="localStorage.removeItem('loggedIn');localStorage.removeItem('username'); window.location.reload()">Log Out</button>
+                    </div>
+                    <div class="account-center-item">
+                        <h2>Subscription Information</h2>
+                        <label for="subscription-type">Subscription Type: </label>
+                        <input type="text" id="subscription-type" value="Subscription Type" readonly>
+                        <label for="subscription-expiry">Subscription Expires: </label>
+                        <input type="text" id="subscription-expiry" value="Subscription Expiry" readonly>
+                        <button onclick="renewSubscription()" id="subscription-expiry-msg">Renew Subscription</button>
+                    </div>
+                    <div class="account-center-item">
+                        <h2>Account Settings</h2>
+                        <button id="change-pwd" onclick="newPwd()">Change Password</button>
+                        <button id="change-acc-type" onclick="changeAccType()">Change Account Type</button>
+                        <button id="del-acc" onclick="delAcc()">Delete Account</button>
+                    </div>
+                </div>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/account.js"></script>
+    </body>
+</html>
