@@ -4,10 +4,12 @@
 
 <instance-profile id="md"
                  name="M431 Documentation"
-                 start-page="general.md">
+                  start-page="Table-of-Content.md">
 
+    <toc-element topic="Table-of-Content.md" accepts-web-file-names-ref="734d11ff"/>
     <toc-element topic="general.md"/>
-    <toc-element topic="inform.md"/>
-    <toc-element topic="planen-plan.md"/>
-    <toc-element topic="Entscheiden-choice.md"/>
+    <toc-element topic="informieren.md"/>
+    <toc-element topic="planen.md"/>
+    <toc-element topic="entscheiden.md"/>
+    <toc-element topic="realisieren.md"/>
 </instance-profile>

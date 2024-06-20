@@ -1,11 +1,11 @@
-<show-structure depth="2"/>
-# Planen (plan)
+<show-structure depth="3"/>
 
-In this section, we will document our planning for the project. This includes the planning of the project itself, the planning of the documentation, and the planning of the presentation.
+# Planen
 
-> Note that we planned our Stream Sphere on YouTrack. You can find the YouTrack Gantt Chart [here](https://ims.youtrack.cloud/gantt-charts/199-1).
-> 
-{style="note"}
+In this section, we will document our planning for the project. Since the IPERKA strategy says that one should plan at
+least 2 different variants for a project and then choose one of them. So that is what we did. Below you can see two
+different variations of the project. After [choosing a Model](entscheiden.md#finish-planning) we created a gantt chart
+that fit the Model.
 
 ## Variants
 
@@ -32,7 +32,7 @@ Here you can see the first variant of the project plan. This variant includes th
 ![variant2.drawio.png](variant2.drawio.png) {border-effect="rounded" thumbnail="true"}
 
 Here you can see the second variant of the project plan. This variant includes the following objects:
-- A Header wherere the logo and a (smaller) search bar are located.
+- A Header where the logo and a (smaller) search bar are located.
 - A static Sidebar
 - A Main Content area where the user can see several videos.
 
@@ -49,7 +49,15 @@ Here you can see the second variant of the project plan. This variant includes t
 
 ### Conclusion
 
-[See here what decision we made.](Entscheiden-choice.md)
+[See here what decision we made.](entscheiden.md#nutzwertanalyse-scoringmodel)
 
 
-
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>
