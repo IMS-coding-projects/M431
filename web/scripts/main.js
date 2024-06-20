@@ -1,18 +1,28 @@
-// Notice: most (not all) of the code here is AI generated (GitHub Copilot) and may not be the best practice. It has been modified to work with the website.
-
-var sidenavElement = document.getElementById("sidenav");
-var headerElement = document.querySelectorAll('header');
-var mainElement = document.querySelectorAll('main');
-var welcomemsgElement = document.querySelector('main div.welcomemsg');
-var inputElements = document.querySelectorAll('input');
-var buttonElements = document.querySelectorAll('button:not(.sidenav-styles button)');
-var images = document.querySelectorAll('img');
-var footerElement = document.querySelectorAll('footer');
-var bodyElement = document.querySelector('body');
-var loginButton = document.querySelector('.login-button a');
+const loginSignupElement = document.querySelector('.login-button');
+const loginSignupText = document.querySelector('.login-button a');
+if (localStorage.getItem('loggedIn') === 'true') {
+    loginSignupText.textContent = 'Dashboard';
+    loginSignupText.href = '/pages/account/';
+    loginSignupElement.href = '/pages/account/';
+    loginSignupElement.style.backgroundColor = '#f71d1d';
+}
 
 // Menu Click
 // nav from w3schools.com with custom modifications
+const sidenavElement = document.getElementById("sidenav");
+const headerElement = document.querySelectorAll('header');
+const mainElement = document.querySelectorAll('main');
+const welcomemsgElement = document.querySelector('main div.welcomemsg');
+const inputElements = document.querySelectorAll('input');
+const buttonElements = document.querySelectorAll('button:not(.sidenav-styles button):not(.login-button)');
+const images = document.querySelectorAll('img');
+const footerElement = document.querySelectorAll('footer');
+const bodyElement = document.querySelector('body');
+const loginButton = document.querySelector('.login-button a');
+const formElement = document.querySelectorAll('.login-signup-container form');
+const selectElements = document.querySelectorAll('select');
+const accountCenterButtons = document.querySelectorAll('.account-center-container button');
+
 function openNav() {
     loginButton.style.color = "#A5A5A5FF";
     bodyElement.style.backgroundColor = "#A5A5A5FF";
@@ -20,13 +30,18 @@ function openNav() {
         sidenavElement.style.width = "250px";
         sidenavElement.style.zIndex = "5";
     }
-    for (var h = 0; h < headerElement.length; h++) {
+    for (let h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
             headerElement[h].style.backgroundColor = "#A5A5A5FF";
             headerElement[h].style.zIndex = "1";
         }
     }
-    for (var m = 0; m < mainElement.length; m++) {
+    for (let s = 0; s < selectElements.length; s++) {
+        if(selectElements[s]) {
+            selectElements[s].style.backgroundColor = "#A5A5A5FF";
+        }
+    }
+    for (let m = 0; m < mainElement.length; m++) {
         if(mainElement[m]) {
             mainElement[m].style.backgroundColor = "#A5A5A5FF";
         }
@@ -34,57 +49,68 @@ function openNav() {
     if(welcomemsgElement) {
         welcomemsgElement.style.filter = "brightness(50%)";
     }
-    for (var f = 0; f < footerElement.length; f++) {
+    for (let f = 0; f < footerElement.length; f++) {
         if(footerElement[f]) {
             footerElement[f].style.backgroundColor = "#A5A5A5FF";
         }
     }
-    for (var i = 0; i < inputElements.length; i++) {
+    for (let i = 0; i < inputElements.length; i++) {
         if(inputElements[i]) {
             inputElements[i].style.backgroundColor = "#959595";
         }
     }
-    for (var i = 0; i < buttonElements.length; i++) {
+    for (let i = 0; i < buttonElements.length; i++) {
         if(buttonElements[i]) {
             buttonElements[i].style.backgroundColor = "#5e5e5e";
             buttonElements[i].style.color = "#a5a5a5";
         }
     }
-    for (var i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length; i++) {
         if(images[i]) {
             images[i].style.filter = "brightness(60%)";
             images[i].style.transition = "filter 0.5s";
             images[i].style.zIndex = "0";
         }
     }
+    for (let i = 0; i < formElement.length; i++) {
+        if(formElement[i]) {
+            formElement[i].style.backgroundColor = "#9c9c9c";
+        }
+    }
 }
 
 function closeNav() {
     loginButton.style.color = "white";
+    bodyElement.style.backgroundColor = "white";
     if(sidenavElement) {
         sidenavElement.style.width = "0px";
     }
-    for (var h = 0; h < headerElement.length; h++) {
+    for (let h = 0; h < headerElement.length; h++) {
         if(headerElement[h]) {
             headerElement[h].style.backgroundColor = "white";
         }
     }
-    for (var m = 0; m < mainElement.length; m++) {
+    for (let m = 0; m < mainElement.length; m++) {
         if(mainElement[m]) {
             mainElement[m].style.backgroundColor = "white";
         }
     }
-    for (var f = 0; f < footerElement.length; f++) {
+    for (let s = 0; s < selectElements.length; s++) {
+        if(selectElements[s]) {
+            selectElements[s].style.backgroundColor = "white";
+        }
+    }
+    for (let f = 0; f < footerElement.length; f++) {
         if(footerElement[f]) {
             footerElement[f].style.backgroundColor = "white";
         }
     }
-    for (var i = 0; i < inputElements.length; i++) {
+    for (let i = 0; i < inputElements.length; i++) {
         if(inputElements[i]) {
             inputElements[i].style.backgroundColor = "white";
         }
     }
-    for (var i = 0; i < buttonElements.length; i++) {
+    for (let i = 0; i < buttonElements.length; i++) {
         if(buttonElements[i]) {
             buttonElements[i].style.backgroundColor = "#595959";
             buttonElements[i].style.color = "white";
@@ -93,20 +119,50 @@ function closeNav() {
     if(welcomemsgElement) {
         welcomemsgElement.style.filter = "brightness(100%)";
     }
-    for (var i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length; i++) {
         if(images[i]) {
             images[i].style.filter = "brightness(100%)";
             images[i].style.zIndex = "0";
         }
     }
-    bodyElement.style.backgroundColor = "white";
+    for (let i = 0; i < formElement.length; i++) {
+        if(formElement[i]) {
+            formElement[i].style.backgroundColor = "#e1e1e1";
+        }
+    }
+    for (let i = 0; i < accountCenterButtons.length; i++) {
+        if(accountCenterButtons[i]) {
+            accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+            accountCenterButtons[i].style.color = "black";
+            if (accountCenterButtons[i].textContent === "Log Out") {
+                accountCenterButtons[i].style.backgroundColor = "#595959";
+                accountCenterButtons[i].style.color = "white";
+                accountCenterButtons[i].addEventListener('mouseover', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#f71d1d";
+                });
+                accountCenterButtons[i].addEventListener('mouseout', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#595959";
+                });
+            }
+            if (accountCenterButtons[i].textContent === "Delete Account") {
+                accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+                accountCenterButtons[i].style.color = "black";
+                accountCenterButtons[i].addEventListener('mouseover', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#f71d1d";
+                });
+                accountCenterButtons[i].addEventListener('mouseout', function() {
+                    accountCenterButtons[i].style.backgroundColor = "#F0F0F0";
+                });
+            }
+        }
+    }
 }
 
 // Make the header sticky on scroll
 // stick header from GitHub Copilot with custom modifications
 window.onscroll = function() {onScroll()};
-var header = document.getElementById("stickyhead");
-var sticky = header.offsetTop;
+const header = document.getElementById("stickyhead");
+const sticky = header.offsetTop;
 function onScroll() {
     if (window.location.pathname.includes('/content/watch/') || window.location.pathname.includes('/pages/streamsphere-music/')) {
         header.classList.remove("sticky");
@@ -122,9 +178,12 @@ function onScroll() {
 
 // Search Bar
 // search from w3schools.com with custom modifications
-const urlParams = new URLSearchParams(window.location.search);
-const q = urlParams.get('q');
-const isSearch = window.location.pathname === '/search.html';
+function getUrlParams() {
+    return new URLSearchParams(window.location.search);
+}
+let urlParams = getUrlParams();
+let q = urlParams.get('q');
+let isSearch = window.location.pathname === '/search.html' || window.location.pathname === '/pages/streamsphere-music/search.html';
 if (isSearch && q) {
     document.getElementById('search-query').textContent = "Showing results for " + q + ":";
 } else if (isSearch && !q) {
@@ -152,13 +211,13 @@ const clear = (() => {
 // only allow like button to be clicked once
 // own code with little help from Copilot
 if (window.location.pathname.includes('/content/watch/')) {
-    var videoId = window.location.pathname.split('/').pop();
+    const videoId = window.location.pathname.split('/').pop();
     document.getElementById('like-button').addEventListener('click', function () {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";
-        document.cookie = `liked-${videoId}=True; expires=${new Date(Date.now() + 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+        localStorage.setItem(`liked-${videoId}`, 'True');
     });
-    if (document.cookie.indexOf(`liked-${videoId}=True`) !== -1) {
+    if (localStorage.getItem(`liked-${videoId}`) === 'True') {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";
     }
@@ -166,13 +225,13 @@ if (window.location.pathname.includes('/content/watch/')) {
 
 // read more button
 // Copilot generated code with modifications
-var pElement = document.querySelector('main.watchview > p');
+const pElement = document.querySelector('main.watchview > p');
 if (pElement && pElement.textContent.length > 300) {
-    var fullText = pElement.innerHTML;
+    const fullText = pElement.innerHTML;
     pElement.innerHTML = pElement.innerHTML.substring(0, 300) + '...';
     pElement.style.borderBottomRightRadius = '0';
     pElement.style.borderBottomLeftRadius = '0';
-    var readMoreButton = document.createElement('button');
+    const readMoreButton = document.createElement('button');
     readMoreButton.textContent = 'Read More';
     readMoreButton.className = 'read-more';
     readMoreButton.addEventListener('click', function() {

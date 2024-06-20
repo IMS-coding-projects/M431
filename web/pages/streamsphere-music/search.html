@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Stream Sphere | Login</title>
+        <title>Stream Sphere Music | Music Search</title>
         <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,10 @@
         <div id="sidenav" class="sidenav-styles" aria-hidden="true">
             <button class="closebtn" onclick="closeNav()" aria-label="close navigation">&times;</button>
             <a href="/">Home</a>
-            <a href="/pages/login/" class="selected">Login/Signup</a>
+            <a href="/pages/login/">Login/Signup</a>
             <a href="/pages/trending/">Trending</a>
             <a href="/pages/about-us/">About us</a>
-            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+            <a href="/pages/streamsphere-music/" class="selected">StreamSphere Music</a>
         </div>
         <header id="stickyhead">
             <div class="leftheader">
@@ -35,29 +35,25 @@
         </header>
 
         <main>
-            <div class="login-signup-container">
-                
-                <form action="/pages/login/" method="POST">
-                    <h1 style="text-align: center; margin-top: 10px">Login</h1>
-                    <label for="username">Username <span id="username-message">*</span></label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password <span id="pwd-message">*</span></label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Login</button>
-                    <span id="error-message" style="font-weight: bold; font-size: large"></span>
-                    <a href="/pages/signup/">
-                        <button type="button" id="signup">Don't have an account?<br>Sign up here!</button>
-                    </a>
-                </form>
-            </div>
+            <h1 style="margin-top: 10px" id="search-query"></h1>
         </main>
+
+        <div class="page-switcher">
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <span>...</span>
+            <a href="#" class="page-link">8</a>
+            <a href="#" class="page-link">9</a>
+            <a href="#" class="page-link">10</a>
+        </div>
 
         <footer>
             <a href="/pages/about-us/impressum"><p>Impressum</p></a>
             <p>&copy; Copyright StreamSphere 2024</p>
             <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
         </footer>
+
         <script type="text/javascript" src="/scripts/main.js"></script>
-        <script type="text/javascript" src="/scripts/login.js"></script>
     </body>
 </html>
