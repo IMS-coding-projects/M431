@@ -9,7 +9,7 @@ on [YouTrack](https://ims.youtrack.cloud/gantt-charts/199-1?issue=M431WEB-13) or
 
 ![Different Tasks that we had to do in the realisieren phase.](realisieren.png) {border-effect="rounded" thumbnail="
 true"}
-
+    
 Before we started with coding we made different branches on the GitHub repository. This was necessary to work on
 different parts of the project at the same time. The branches were named "development" and "documentation". The
 development branch was used for the code and the documentation branch was used for the documentation. At the end of the
