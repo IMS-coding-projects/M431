@@ -32,7 +32,7 @@
 
 [Stack Overflow](https://stackoverflow.com/) for blocking embedded ads
 
-
+[Bing Picture AI](https://www.bing.com/images/create) for playlist images
 <seealso>
        <category ref="author">
             <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>          
