@@ -49,6 +49,8 @@ topics. Each of them covers one part of the IPERKA strategy. The topics are stru
 
 5. [Realisieren](realisieren.md)
 
+6. [Kontrollieren und Auswertung](kontrollieren-auswerten.md)
+
 <seealso>
        <category ref="author">
             <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
