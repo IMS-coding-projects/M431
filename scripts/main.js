@@ -211,7 +211,7 @@ const clear = (() => {
 // only allow like button to be clicked once
 // own code with little help from Copilot
 if (window.location.pathname.includes('/M431-WebProject/content/watch/')) {
-    const videoId = window.location.pathname.split('/M431-WebProject/').pop();
+    const videoId = window.location.pathname.split('/').pop();
     document.getElementById('like-button').addEventListener('click', function () {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";
