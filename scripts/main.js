@@ -175,20 +175,39 @@ function onScroll() {
     }
 }
 
-
 // Search Bar
 // search from w3schools.com with custom modifications
-function getUrlParams() {
-    return new URLSearchParams(window.location.search);
-}
-let urlParams = getUrlParams();
-let q = urlParams.get('q');
-let isSearch = window.location.pathname === '/M431-WebProject/search.html' || window.location.pathname === '/M431-WebProject/pages/streamsphere-music/search.html';
-if (isSearch && q) {
-    document.getElementById('search-query').textContent = "Showing results for " + q + ":";
-} else if (isSearch && !q) {
-    window.location.href = "/M431-WebProject/";
-}
+window.onload = function() {
+    function getUrlParams() {
+        return new URLSearchParams(window.location.search);
+    }
+    let urlParams = getUrlParams();
+    let q = urlParams.get('q');
+    let isSearch = window.location.pathname === '/M431-WebProject/search.html' || window.location.pathname === '/M431-WebProject/pages/streamsphere-music/search.html';
+    if (isSearch && q) {
+        document.getElementById('search-query').textContent = "Showing results for " + q + ":";
+    } else if (isSearch && !q) {
+        window.location.href = "/M431-WebProject/";
+    }
+
+    // only allow like button to be clicked once
+    // own code with little help from Copilot
+    if (window.location.pathname.includes('/M431-WebProject/content/watch/')) {
+        const videoId = window.location.pathname.split('/').pop();
+        document.getElementById('like-button').addEventListener('click', function () {
+            document.getElementById('like-button').style.backgroundColor = "green";
+            document.getElementById('like-button').textContent = "Liked👍";
+            localStorage.setItem(`liked-${videoId}`, 'True');
+        });
+        if (localStorage.getItem(`liked-${videoId}`) === 'True') {
+            document.getElementById('like-button').style.backgroundColor = "green";
+            document.getElementById('like-button').textContent = "Liked👍";
+        }
+    }
+
+};
+
+
 
 // Block ads
 // block embedded ads from https://stackoverflow.com/questions/53433184/remove-ads-from-embedded-youtube-video
@@ -207,21 +226,6 @@ const clear = (() => {
         clearTimeout(timeout);
     }
 })();
-
-// only allow like button to be clicked once
-// own code with little help from Copilot
-if (window.location.pathname.includes('/M431-WebProject/content/watch/')) {
-    const videoId = window.location.pathname.split('/').pop();
-    document.getElementById('like-button').addEventListener('click', function () {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-        localStorage.setItem(`liked-${videoId}`, 'True');
-    });
-    if (localStorage.getItem(`liked-${videoId}`) === 'True') {
-        document.getElementById('like-button').style.backgroundColor = "green";
-        document.getElementById('like-button').textContent = "Liked👍";
-    }
-}
 
 // read more button
 // Copilot generated code with modifications
