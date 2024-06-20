@@ -52,6 +52,7 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         errorMsg.style.color = 'red';
         errorMsg.style.margin = '10px 10px 35px 10px';
     } else {
+        localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('username', username);
         window.location.href = "/M431-WebProject/pages/account/";
     }
