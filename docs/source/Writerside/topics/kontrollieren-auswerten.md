@@ -5,8 +5,8 @@ In this section, each member of the project team will reflect on the project. We
 - How did I proceed and why did I proceed as I did?
   - What did I do well, what didn't work so well and why?
 - What difficulties / problems occurred and why?
-- What conclusions do I draw from this and what have I learned?
-    - What would I do differently next time?
+  - What conclusions do I draw from this and what have I learned?
+- What would I do differently next time?
 
 ## How did I proceed and why did I proceed as I did?
 
