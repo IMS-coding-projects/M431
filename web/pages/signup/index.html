@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Sign Up</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="sidenav" class="sidenav-styles" aria-hidden="true">
+            <button class="closebtn" onclick="closeNav()" aria-label="close navigation">&times;</button>
+            <a href="/">Home</a>
+            <a href="/pages/login/" class="selected">Login/Signup</a>
+            <a href="/pages/trending/">Trending</a>
+            <a href="/pages/about-us/">About us</a>
+            <a href="/pages/streamsphere-music/">StreamSphere Music</a>
+        </div>
+
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()" aria-label="open navigation">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get" aria-labelledby="search-label">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+                <button class="login-button" onclick="window.location.href = '/pages/login/';"><a href="/pages/login/">Login/Signup</a></button>
+            </div>
+        </header>
+
+
+        <main>
+            <div class="login-signup-container">
+                <form action="/pages/signup/" method="POST">
+                    <h1 style="text-align: center; margin-top: 10px">Sign Up</h1>
+                    <label for="username">Username <span id="username-message">*</span></label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password <span id="pwd-message">*</span></label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="password2">Repeat Password *</label>
+                    <input type="password" id="password2" name="password" required>
+                    <button type="submit">Sign Up</button>
+                    <span id="error-message" style="font-weight: bold; font-size: large"></span>
+                    <a href="/pages/login/">
+                        <button type="button" id="login">Already have an Account?<br>Login Here!</button>
+                    </a>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum/"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+        <script type="text/javascript" src="/scripts/signup.js"></script>
+    </body>
+</html>

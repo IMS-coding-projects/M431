@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StreamSphere Music | Top Hits 2024</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="sidenav" class="sidenav-styles" aria-hidden="true">
+        <button class="closebtn" onclick="closeNav()" aria-label="close navigation">&times;</button>
+        <a href="/">Home</a>
+        <a href="/pages/login/">Login/Signup</a>
+        <a href="/pages/trending/">Trending</a>
+        <a href="/pages/about-us/">About us</a>
+        <a href="/pages/streamsphere-music/" class="selected">StreamSphere Music</a>
+    </div>
+    <header id="stickyhead">
+        <div class="leftheader">
+            <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()" aria-label="open navigation">&#9776; Menu</span>
+            <a href="/pages/streamsphere-music/">
+                <img src="/images/music-logo.png" alt="Stream Sphere Logo Music" class="logo">
+            </a>
+        </div>
+        <div class="rightheader">
+            <form action="/search.html" method="get" aria-labelledby="search-label">
+                <label>
+                    <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                </label>
+                <button type="submit" id="searchbutton" class="search-button">Search</button>
+            </form>
+            <button class="login-button" onclick="window.location.href = '/pages/login/';"><a href="/pages/login/">Login/Signup</a></button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="/pages/streamsphere-music/">Playlists</a></li>
+                <li><a href="/pages/streamsphere-music/playlists/1/">Top Hits 2024</a></li>
+            </ul>
+        </nav>
+
+        <div class="playlist-header">
+            <img src="/images/streamsphere-music/playlist/top_hits_2024.png" alt="Top Hits 2024">
+            <div class="details">
+                <h2>Top Hits 2024</h2>
+                <p>by StreamSphere</p>
+                <p>Updated daily</p>
+                <p>100 songs</p>
+                <button id="edit-playlist" onclick="edit()">Edit Playlist</button>
+            </div>
+        </div>
+
+        <div class="track-list">
+
+            <div class="track-list-header">
+                <p>Title</p>
+                <div class="track-list-header-right">
+                    <p class="artist">Artist</p>
+                    <p>Duration</p>
+                </div>
+            </div>
+
+
+            <!-- Example track items!!! -->
+            <div class="track">
+                <img src="/images/streamsphere-music/song/song_habicht.jpg" alt="Track 1" class="track-img">
+                <p>1. Habicht</p>
+                <p>DORFTEKK</p>
+                <p>2:32</p>
+            </div>
+            <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 2" class="track-img">
+                <p>2. Song Title 2</p>
+                <p>Artist Name</p>
+                <p>4:05</p>
+            </div>
+            <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 3" class="track-img">
+                <p>3. Song Title 3</p>
+                <p>Artist Name</p>
+                <p>2:55</p>
+            </div>
+            <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 4" class="track-img">
+                <p>4. Song Title 4</p>
+                <p >Artist Name</p>
+                <p>1:22</p>
+            </div>
+            <div class="track">
+                <img src="/images/img_placeholder.png" alt="Track 5" class="track-img">
+                <p>5. Song Title 5</p>
+                <p>Artist Name</p>
+                <p>3:25</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+        <p>&copy; Copyright StreamSphere 2024</p>
+        <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+    </footer>
+    <script type="text/javascript" src="/scripts/music-management.js"></script>
+    <script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+</html>

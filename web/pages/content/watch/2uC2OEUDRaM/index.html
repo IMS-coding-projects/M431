@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stream Sphere | Watch: Denmark recalls Korean ramen</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Stuff that is not visible: -->
+        <div id="sidenav" class="sidenav-styles">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <a href="/">Home</a>
+            <a href="/pages/trending/">Trending</a>
+<a href="/pages/streamsphere-music/">StreamSphere Music</a>
+<a href="/pages/about-us/">About us</a>
+        </div>
+        <!-- END: Stuff that is not visible: -->
+
+    
+        <header id="stickyhead">
+            <div class="leftheader">
+                <span style="font-size:30px;cursor:pointer;margin-left: 15px" onclick="openNav()">&#9776; Menu</span>
+                <a href="/">
+                    <img src="/images/logo.png" alt="Stream Sphere Logo" class="logo">
+                </a>
+            </div>
+            <div class="rightheader">
+                <form action="/search.html" method="get" aria-labelledby="search-label">
+                    <label>
+                        <input type="text" id="searchbar" placeholder="Search..." name="q" class="search-input">
+                    </label>
+                    <button type="submit" id="searchbutton" class="search-button">Search</button>
+                </form>
+            <button class="login-button" onclick="window.location.href = '/pages/login/';"><a href="/pages/login/">Login/Signup</a></button>
+            </div>
+        </header>
+
+
+        <main class="watchview">
+            <div class="iframe-container"><iframe allowfullscreen src="https://www.youtube-nocookie.com/embed/2uC2OEUDRaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" ></iframe></div>
+            <br>
+            <h1>Denmark recalls Korean ramen for being too spicy | BBC News<button id="like-button">Like👍</button></h1>
+            <p>Denmark has recalled several spicy ramen noodle products by South Korean company Samyang.<br>
+               The country’s food agency claimed that the capsaicin levels in the packet noodles could poison consumers.<br>
+               It's unknown if any specific incidents in Denmark had prompted authorities there to take action.<br>
+               Subscribe here: http://bit.ly/1rbfUog<br>
+               For more news, analysis and features visit: www.bbc.com/news<br>
+               #Denmark #Ramen #BBCNews</p>
+            <footer>
+                <a href="/pages/content/watch/qW7CGTK-1vA"><button>Previous</button></a>
+                <button id="take-down" onclick="takeDown()">Take down video</button>
+                <script>
+                    const button = document.querySelector('#take-down');
+                    let videoID = window.location.href.split('/').pop();
+                    window.onload = function() {
+                        if (localStorage.getItem('admin') === 'true' && localStorage.getItem('loggedIn') === 'true' && localStorage.getItem('username') === 'admin') {
+                            button.style.display = 'block';
+                        } else {
+                            button.style.display = 'none';
+                        }
+                        if (localStorage.getItem(`video-${videoID}-down`) === 'true') {
+                            button.style.display = 'none';
+                            document.querySelector('main').innerHTML = '<h1>Video taken down!</h1>';
+                        }
+                    }
+                    takeDown = () => {
+                        button.innerHTML = 'Processing. Please wait';
+                        setTimeout(() => {
+                            button.style.display = 'none';
+                            document.querySelector('main').innerHTML = '<h1>Video taken down!</h1>';
+                            localStorage.setItem(`video-${videoID}-down`, 'true')
+                        }, 3000);
+                    }
+                </script>
+                <a href="/pages/content/watch/3yZDDr0JKVc"><button>Next</button></a>
+            </footer>
+        </main>
+
+        <footer>
+            <a href="/pages/about-us/impressum"><p>Impressum</p></a>
+            <p>&copy; Copyright StreamSphere 2024</p>
+            <a href="/pages/about-us/privacy-policy/">Privacy Policy</a>
+        </footer>
+        <script type="text/javascript" src="/scripts/main.js"></script>
+    </body>
+</html>
