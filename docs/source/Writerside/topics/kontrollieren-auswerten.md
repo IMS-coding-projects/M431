@@ -74,7 +74,8 @@ more intuitive than VSC for example. What also is a big plus, is that they have 
 easier pulls and commits. Example: When pulling changes from SourceTree, and it recognizes that a local **file** is in a
 conflict, it immediately shows an error message and drops the pull. However, when using any JetBrains client it goes to
 check if uncommited **lines** are in conflict, and otherwise it pulls the new code.
-![conflict.png](conflict.png)
+
+![conflict.png](conflict.png) {border-effect="rounded" thumbnail="true"}
 
 ### Dario {id="dario-different"}
 
@@ -87,3 +88,14 @@ Overall, the process of working on StreamSphere was not troubled with grave conf
 ## General Reflection
 
 We both think that StreamSphere has been a successful project, we have learnt some more new things about html, css and even javascript. We quickly got ahead with each phase of IPERKA, wasted practically no time and personally think we fulfilled each and every requirement for the Project. Overall, it was a fun project in which we worked together well and if we had to do it again we would do it the same way that we did for this Project.
+
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>           
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>

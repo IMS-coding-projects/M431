@@ -1,4 +1,4 @@
-<show-structure depth="4"/>
+<show-structure depth="3"/>
 
 # General
 
@@ -10,8 +10,8 @@ topics. Each of them covers one part of the IPERKA strategy. The topics are stru
 2. [**Planen:** Here](planen.md) you can find our planning for the project.
 3. [**Entscheiden:** Here](entscheiden.md) you can find our decisions for the project.
 4. [**Realisiern:** Here](realisieren.md) you can find out how we created the project.
-5. [**Kontrolliern:** Here](#) you can find out how we tested our results with the project requirements.
-6. [**Auswerten:** And finally, here](#) you can find our evaluation of the project. 
+5. [**Kontrolliern und Auswerten:** Here](kontrollieren-auswerten.md) you can find out how we proceeded, what we learned
+   from the project and reflected on our own actions during the project.
 
 <seealso>
        <category ref="author">

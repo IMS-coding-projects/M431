@@ -31,3 +31,14 @@
 [GitHub Copilot](https://copilot.github.com/) for small helps in JS and repetitive tasks
 
 [Stack Overflow](https://stackoverflow.com/) for blocking embedded ads
+
+
+<seealso>
+       <category ref="author">
+            <a href="https://www.github.com/An0n-00/M431-WebProject">Chandra und Dario</a>          
+       </category>
+       <category ref="external">
+           <a href="https://www.github.com/An0n-00/M431-WebProject">GitHub Repository</a>
+           <a href="https://ims.youtrack.cloud/gantt-charts/199-1">YouTrack</a>
+       </category>
+</seealso>
