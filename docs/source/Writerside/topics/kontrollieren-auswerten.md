@@ -23,7 +23,7 @@ implemented).
 
 ### Dario {id="dario-proceed"}
 
-<yap></yap>
+At first, I informed myself upon several possible project ideas and which I could imagine creating in form of a project in a team. I proceeded by telling my other member of the project my possible ideas, what I found or any other significant information. Upon deciding what project should be made I started with the front-end of the website since it was probably what I could have done best. I proceeded doing things this way, think of ideas, think of what must be changed to implement my idea and if it is even possible to fulfil my goal. I used this method to work because it just flawlessly worked for me, it is logical and made me able to work efficiently and productively.
 
 ## What did I do well, what didn't work so well and why?
 
@@ -40,7 +40,7 @@ In the end I think the project was quite successful.
 
 ### Dario {id="dario-well"}
 
-<yap></yap>
+Personally, the design of most that I had done came out well, it looks appealing and fulfils its purpose (as front-end). Merging conflicts were a bit frustrating, CSS declarations with certain features like the breadcrumbs or any formatting declarations were slightly troubling sometimes. I wanted the design to be appealing and not make it seem like a website that was made 20 years ago. When both members of the project edit the same line in a file and one tries to commit and push after the other already had done that, it will display an error message.
 
 ## What difficulties / problems occurred and why?
 
@@ -52,7 +52,7 @@ with another person using Git before. It was a bit tricky in the beginning, but 
 
 ### Dario {id="dario-difficulties"}
 
-<yap></yap>
+Sometimes source tree decided to display me some error messages that ended up being solved quite easily. The most things that slightly did not work well were CSS changes/design flaws. Such as the breadcrumb not formatting in a row because I forgot a certain CSS declaration. The Problems were only that I forgot to pull in the repository, making me unable to sometimes merge or commit changes. On the other hand, for CSS declarations were mostly simple thinking problems that lead to some certain errors.
 
 ## What conclusions do I draw from this and what have I learned?
 
@@ -64,7 +64,7 @@ IPERKA strategy. I think that I have learned a lot from this project, and I am q
 
 ### Dario {id="dario-conclusions"}
 
-<yap></yap>
+I should sometimes not think too hard about simple problems that can be easily solved with some slight changes or simple solutions (CSS as an example), there is no need to make things harder or more complicated.
 
 ## What would I do differently next time?
 
@@ -81,3 +81,8 @@ However when using any JetBrains client it goes to check if uncommited **lines**
 the new code.
 
 ### Dario {id="dario-different"}
+
+Working on this project worked well and I have learned some new things along the way when working on StreamSphere.
+I liked to work with Chandra on this project since it worked smoothly and we mostly always understood what each other’s ideas were. It should also be taken into notice that I should use JetBrains programs/tools for this kind of project since they provide more easy and efficient working. 
+Overall, the process of working on StreamSphere was not troubled with grave conflicts and went rather smoothly. It would result in finishing with the project faster or being able to implement more features.
+
