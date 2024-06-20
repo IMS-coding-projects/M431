@@ -2,8 +2,8 @@ const loginSignupElement = document.querySelector('.login-button');
 const loginSignupText = document.querySelector('.login-button a');
 if (localStorage.getItem('loggedIn') === 'true') {
     loginSignupText.textContent = 'Dashboard';
-    loginSignupText.href = '/pages/account/';
-    loginSignupElement.href = '/pages/account/';
+    loginSignupText.href = '/M431-WebProject/pages/account/';
+    loginSignupElement.href = '/M431-WebProject/pages/account/';
     loginSignupElement.style.backgroundColor = '#f71d1d';
 }
 
@@ -164,7 +164,7 @@ window.onscroll = function() {onScroll()};
 const header = document.getElementById("stickyhead");
 const sticky = header.offsetTop;
 function onScroll() {
-    if (window.location.pathname.includes('/content/watch/') || window.location.pathname.includes('/pages/streamsphere-music/')) {
+    if (window.location.pathname.includes('/M431-WebProject/content/watch/') || window.location.pathname.includes('/M431-WebProject/pages/streamsphere-music/')) {
         header.classList.remove("sticky");
     } else {
         if (window.scrollY > sticky) {
@@ -183,7 +183,7 @@ function getUrlParams() {
 }
 let urlParams = getUrlParams();
 let q = urlParams.get('q');
-let isSearch = window.location.pathname === '/search.html' || window.location.pathname === '/pages/streamsphere-music/search.html';
+let isSearch = window.location.pathname === '/M431-WebProject/search.html' || window.location.pathname === '/M431-WebProject/pages/streamsphere-music/search.html';
 if (isSearch && q) {
     document.getElementById('search-query').textContent = "Showing results for " + q + ":";
 } else if (isSearch && !q) {
@@ -210,8 +210,8 @@ const clear = (() => {
 
 // only allow like button to be clicked once
 // own code with little help from Copilot
-if (window.location.pathname.includes('/content/watch/')) {
-    const videoId = window.location.pathname.split('/').pop();
+if (window.location.pathname.includes('/M431-WebProject/content/watch/')) {
+    const videoId = window.location.pathname.split('/M431-WebProject/').pop();
     document.getElementById('like-button').addEventListener('click', function () {
         document.getElementById('like-button').style.backgroundColor = "green";
         document.getElementById('like-button').textContent = "Liked👍";

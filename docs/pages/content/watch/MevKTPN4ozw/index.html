@@ -33,7 +33,7 @@
                     </label>
                     <button type="submit" id="searchbutton" class="search-button">Search</button>
                 </form>
-            <button class="login-button" onclick="window.location.href = '/pages/login/';"><a href="/M431-WebProject/pages/login/">Login/Signup</a></button>
+            <button class="login-button" onclick="window.location.href = '/M431-WebProject/pages/login/';"><a href="/M431-WebProject/pages/login/">Login/Signup</a></button>
             </div>
         </header>
 
@@ -55,7 +55,7 @@
                 <button id="take-down" onclick="takeDown()">Take down video</button>
                 <script>
                     const button = document.querySelector('#take-down');
-                    let videoID = window.location.href.split('/').pop();
+                    let videoID = window.location.href.split('/M431-WebProject/').pop();
                     window.onload = function() {
                         if (localStorage.getItem('admin') === 'true' && localStorage.getItem('loggedIn') === 'true' && localStorage.getItem('username') === 'admin') {
                             button.style.display = 'block';
