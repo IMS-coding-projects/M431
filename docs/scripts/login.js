@@ -37,7 +37,7 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
     localStorage.setItem('username', username);
     const hashedAdminPwd = '8ebd449afedf357eb250d7a22991fb75560af9d0e5646e975b4eb47df8fcfeb9';
     if (username === 'admin' && hashedPassword === hashedAdminPwd) {
-        window.location.href = "/pages/admin/";
+        window.location.href = "/M431-WebProject/pages/admin/";
         localStorage.setItem('admin', true);
         localStorage.setItem('loggedIn', true);
     }
@@ -48,7 +48,7 @@ document.querySelector('div.login-signup-container').addEventListener('submit', 
         errorMsg.style.margin = '10px 10px 35px 10px';
     } else {
         localStorage.setItem('loggedIn', true);
-        window.location.href = "/pages/account/";
+        window.location.href = "/M431-WebProject/pages/account/";
     }
 });
 
@@ -58,6 +58,6 @@ window.onload = function() {
         document.querySelector('#username').value = username;
     }
     if (localStorage.getItem('loggedIn') === 'true') {
-        window.location.href = "/pages/account/";
+        window.location.href = "/M431-WebProject/pages/account/";
     }
 }

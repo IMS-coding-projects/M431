@@ -19,7 +19,7 @@ function saveDataAdmin() {
             localStorage.removeItem('admin');
             localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('username', 'NiceTry');
-            window.location.href = "/pages/account/";
+            window.location.href = "/M431-WebProject/pages/account/";
             return;
         }
     }
@@ -34,7 +34,7 @@ function saveDataAdmin() {
             localStorage.removeItem('admin');
             localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('username', 'NotAdmin');
-            window.location.href = "/pages/account/";
+            window.location.href = "/M431-WebProject/pages/account/";
         }
     });
 }
@@ -43,7 +43,7 @@ function newAdminPwd() {
     localStorage.removeItem('admin');
     localStorage.removeItem('username');
     localStorage.removeItem('loggedIn');
-    window.location.href = "/pages/signup/index.html?uname=" + encodeURIComponent('notAdmin') + "&newpwd=true";
+    window.location.href = "/M431-WebProject/pages/signup/index.html?uname=" + encodeURIComponent('notAdmin') + "&newpwd=true";
 }
 
 
@@ -52,7 +52,7 @@ window.onload = function() {
         localStorage.removeItem('admin');
         localStorage.removeItem('loggedIn');
         localStorage.removeItem('username');
-        window.location.href = "/pages/account/";
+        window.location.href = "/M431-WebProject/pages/account/";
     }
     document.querySelector('#subscription-type').value = 'Permanent';
     document.querySelector('#subscription-expiry').value = 'Never';

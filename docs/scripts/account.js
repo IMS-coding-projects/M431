@@ -31,7 +31,7 @@ function renewSubscription() {
 
 function newPwd() {
     localStorage.removeItem('loggedIn');
-    window.location.href = "/pages/signup/index.html?uname=" + encodeURIComponent(localStorage.getItem('username')) + "&newpwd=true";
+    window.location.href = "/M431-WebProject/pages/signup/index.html?uname=" + encodeURIComponent(localStorage.getItem('username')) + "&newpwd=true";
 }
 
 function delAcc() {
@@ -40,7 +40,7 @@ function delAcc() {
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('username');
     setTimeout(function() {
-        window.location.href = "/";
+        window.location.href = "/M431-WebProject/";
     }, 3000);
 }
 
@@ -57,11 +57,11 @@ window.onload = function() {
     if (localStorage.getItem('loggedIn') !== 'true' || username === null) {
         localStorage.removeItem('loggedIn');
         localStorage.removeItem('username');
-        window.location.href = "/";
+        window.location.href = "/M431-WebProject/";
         if (localStorage.getItem('admin') === 'true') {localStorage.removeItem('admin');}
     }
     if (localStorage.getItem('admin') === 'true') {
-        window.location.href = "/pages/admin/";
+        window.location.href = "/M431-WebProject/pages/admin/";
     }
     if (username) {
         document.querySelector('#username').value = username;
@@ -70,6 +70,6 @@ window.onload = function() {
         document.querySelector('#subscription-expiry').value = 'Local storage based subscription, expires when browser is closed. (non-editable)';
         localStorage.setItem('loggedIn', 'true');
     } else {
-        window.location.href = "/";
+        window.location.href = "/M431-WebProject/";
     }
 };

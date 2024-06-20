@@ -187,7 +187,7 @@ let isSearch = window.location.pathname === '/search.html' || window.location.pa
 if (isSearch && q) {
     document.getElementById('search-query').textContent = "Showing results for " + q + ":";
 } else if (isSearch && !q) {
-    window.location.href = "/";
+    window.location.href = "/M431-WebProject/";
 }
 
 // Block ads
